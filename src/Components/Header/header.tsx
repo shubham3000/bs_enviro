@@ -12,7 +12,7 @@ import { IconDownload, IconMenu } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import Logo from "@/assests/Logo/Logo.png";
-import LogoBlue from "@/assests/Logo/Logogreen.png";
+import LogoBlue from "@/assests/Logo/Logogreen1.png";
 
 interface HeaderProps {
   isWhite?: boolean;
@@ -61,7 +61,7 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
   }, []);
 
   return (
-    <section
+    <header
       className={`w-full z-50 transition-all ${
         isScrolled ? "fixed top-0 left-0 shadow-md" : "absolute"
       }`}
@@ -80,7 +80,7 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
             <div className="flex items-center">
               <Link href="/" className="navbar-brand">
                 <Image
-                  src={Logo}
+                  src={isWhite ? Logo : LogoBlue}
                   alt="CloudExtel Logo"
                   className="h-10 w-auto"
                 />
@@ -91,21 +91,21 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
             <div className="flex items-center space-x-8 py-2.5">
                 <>
                   <motion.div
-                    className="flex items-center gap-2 cursor-pointer font-semibold border-2 px-4 py-4 rounded-full transition-colors group text-white border-white hover:text-[#01959A] hover:border-[#01959A]"
+                    className={`${isWhite ? "border-white": "border-[#233852]"} flex items-center gap-2 cursor-pointer font-semibold border-2 px-4 py-4 rounded-full transition-colors text-white `}
                     whileTap={{ scale: 0.9 }}
                   >
-                    <Link href="/" className="group-hover:text-[#01959A] transition-colors">Catalogue Download</Link>
-                    <IconDownload className="group-hover:text-[#01959A] transition-colors" />
+                    <Link href="/" className={`${isWhite ? "text-white": "text-[#233852]"} transition-colors`}>Catalogue Download</Link>
+                    <IconDownload className={`${isWhite ? "text-white": "text-[#233852]"} transition-colors`} />
                   </motion.div>
 
                   <motion.div whileTap={{ scale: 0.9 }}>
                     <button
                       onClick={showSidebar}
                       className={`${
-                        isWhite ? "text-white" : "text-blue-600"
-                      } text-4xl flex justify-center items-center w-20 border-2 px-4 py-4 rounded-full group text-white border-white hover:text-[#01959A] hover:border-[#01959A]`}
+                        isWhite ? "text-white border-white" : "text-[#01959A] border-[#01959A]"
+                      } text-4xl flex justify-center items-center w-20 border-2 px-4 py-4 cursor-pointer rounded-full`}
                     >
-                      <IconMenu className="group-hover:text-[#01959A] transition-colors w-20" />
+                      <IconMenu className={`${isWhite ? "text-white": "text-[#01959A]"} transition-colors w-20`} />
                     </button>
                   </motion.div>
                 </>
@@ -145,7 +145,7 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
           </motion.nav>
         </IconContext.Provider>
       </div>
-    </section>
+    </header>
   );
 };
 
