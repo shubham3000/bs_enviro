@@ -28,8 +28,8 @@ module.exports = {
         center: true,
       },
       fontFamily: {
-        epilogue: ['var(--font-epilogue)', 'sans-serif'],
-        montserrat: ['var(--font-montserrat)', 'sans-serif'],
+        epilogue: ['var(--font-epilogue)'],
+        montserrat: ['var(--font-montserrat)'],
       },
       colors: {
        
