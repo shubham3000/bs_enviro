@@ -14,9 +14,9 @@ export const popUpAnimationProps = {
     variants: popUpAnimationVariants,
     initial: "initial",
     whileInView: "animate",
-    viewport: {
-        once: true,
-    }
+    // viewport: {
+    //     once: true,
+    // }
 };
 
 export const textAnimationvariants = {
@@ -28,16 +28,16 @@ export const textAnimationvariants = {
         opacity: 1,
         y: 0,
         transition: { delay: 0.2, duration: 0.3 },
-    }
+    },
 };
 
 export const textAnimationProps = {
     variants: textAnimationvariants,
     initial: "initial",
     whileInView: "animate",
-    viewport: {
-        once: true,
-    },
+    // viewport: {
+    //     once: true,
+    // },
 };
 
 export const easeInOutAnimationVariants = {
@@ -50,7 +50,7 @@ export const easeInOutAnimationProps = {
     variants: easeInOutAnimationVariants,
     initial: "initial",
     whileInView: "animate",
-    viewport: {
-        once: true,
-    },
+    // viewport: {
+    //     once: true,
+    // },
 };

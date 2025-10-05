@@ -75,8 +75,8 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
 
   return (
     <header
-      className={`w-full z-50 transition-all ${
-        isScrolled ? "fixed top-0 left-0 shadow-md" : "absolute"
+      className={`z-50 w-screen px-4 transition-all flex justify-center items-center ${
+        isScrolled ? "fixed top-0 shadow-md" : "absolute"
       }`}
       style={{
         backgroundColor: isScrolled
@@ -86,7 +86,7 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
           : "transparent",
       }}
     >
-      <div className="container mx-auto px-4">
+      <div className="container">
         <IconContext.Provider value={{ color: "#fff" }}>
           <div className="flex items-center justify-between py-4">
             {/* Logo */}

@@ -10,8 +10,6 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-
-    // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: "class",
@@ -26,15 +24,15 @@ module.exports = {
       },
       container: {
         center: true,
+        padding: "1rem",
       },
       fontFamily: {
         epilogue: ['var(--font-epilogue)'],
         montserrat: ['var(--font-montserrat)'],
+        bitcount: ['var(--font-bitcount)'],
       },
       colors: {
-       
           green: "#01959A",
-    
       },
     },
   },

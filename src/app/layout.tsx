@@ -1,18 +1,5 @@
 import type { Metadata } from "next";
-import { Epilogue, Montserrat } from "next/font/google";
 import "./globals.css";
-
-const epilogue = Epilogue({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-epilogue",
-});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-montserrat",
-});
 
 export const metadata: Metadata = {
   title: "B S Enviro N Infracon Pvt Ltd",
@@ -27,10 +14,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${epilogue.variable} ${montserrat.variable}`}>
-        <div className="block md:flex">
-          {children}
-        </div>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="antialiased">
+        <div className="block md:flex">{children}</div>
       </body>
     </html>
   );
