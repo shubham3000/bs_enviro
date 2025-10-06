@@ -17,7 +17,7 @@ export default function OurMission() {
       <div className="container max-w-full">
         <div className="w-full md:flex md:justify-between">
           {/* Left Section */}
-          <div className="w-3/5 text-white py-24 px-8 bg-[#01959A] 2xl:flex 2xl:justify-end 2xl:items-center">
+          <div className="w-3/5 text-white py-24 bg-[#01959A] 2xl:flex 2xl:justify-end 2xl:items-center">
             <div className="grid gap-24 grid-cols-2 px-24">
               <motion.div
                 className="flex flex-col gap-6"
