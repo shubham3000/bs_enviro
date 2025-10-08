@@ -7,14 +7,20 @@ import { FaFacebookF, FaYoutube } from "react-icons/fa6";
 import { FaInstagram, FaMapMarkerAlt, FaTwitter } from "react-icons/fa";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
+import { motion } from "framer-motion";
+import { popUpAnimationProps } from "@/animation/Framer";
 
 export default function Footer() {
   return (
     <footer className="bg-[#1A2635] text-white w-screen overflow-hidden flex flex-col justify-center items-center">
       {/* Top Section */}
-      <div className="container mx-auto px-10 xl:px-6 py-12 md:flex md:justify-between md:items-start gap-8 xl:gap-12">
+      <div className="container mx-auto px-4 md:px-10 xl:px-6 py-12 flex flex-wrap justify-center lg:justify-between gap-8 lg:gap-12">
         {/* Left Section */}
-        <div className="font-medium" style={{ fontFamily: "Montserrat" }}>
+        <motion.div
+          className="font-medium"
+          style={{ fontFamily: "Montserrat" }}
+          {...popUpAnimationProps}
+        >
           <Link href="/">
             <Image
               src={Logo}
@@ -22,32 +28,33 @@ export default function Footer() {
               className="h-6 xl:h-9 w-auto mb-2"
             />
           </Link>
-          <div className="space-y-3 text-xs xl:text-sm opacity-65">
+          <motion.div className="space-y-3 text-xs xl:text-sm opacity-65">
             <p className="flex items-center gap-2">
-              <FaMapMarkerAlt /> E-1069, 2nd Floor, Sec-7, Dwarka New Delhi -
-              110077 INDIA
+              <FaMapMarkerAlt className="w-4 h-4" /> E-1069, 2nd Floor, Sec-7,
+              Dwarka New Delhi - 110077 INDIA
             </p>
             <div className="flex gap-2 items-start">
-              <BsFillTelephoneFill className="mt-2" />
+              <BsFillTelephoneFill className="mt-2 w-4 h-4" />
               <div className="flex flex-col space-y-3">
                 <p>+91 1141411203</p>
                 <p>+91 8130925273</p>
               </div>
             </div>
             <div className="flex gap-2 items-start">
-              <IoMdMail className="mt-1" />
+              <IoMdMail className="w-5 h-5" />
               <div className="flex flex-col space-y-3">
                 <p>info@bsenviro.com</p>
                 <p>sales@bsenviro.com</p>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Middle Section */}
-        <div
-          className="mt-8 md:mt-0 flex justify-between space-y-4 md:space-y-0 md:flex-row md:space-x-12"
+        <motion.div
+          className="md:text-start flex space-x-8 xl:space-x-24"
           style={{ fontFamily: "Montserrat" }}
+          {...popUpAnimationProps}
         >
           <div className="">
             <h2 className="text-sm xl:text-lg font-bold mb-4">Quick Links</h2>
@@ -61,7 +68,6 @@ export default function Footer() {
               <li>
                 <Link href={"/projects"}>Projects</Link>
               </li>
-              {/* <li><Link href={}>Careers</Link></li> */}
               <li>
                 <Link href={"/contactus"}>Contact Us</Link>
               </li>
@@ -95,12 +101,16 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-        </div>
+        </motion.div>
 
         {/* Social Media Section */}
-        <div className="mt-8 md:mt-0" style={{ fontFamily: "Montserrat" }}>
-          <h2 className="text-sm xl:text-lg font-bold mb-4">Follow Us</h2>
-          <div className="flex space-x-4">
+        <motion.div
+          className=""
+          style={{ fontFamily: "Montserrat" }}
+          {...popUpAnimationProps}
+        >
+          <h2 className="text-sm text-center lg:text-start xl:text-lg font-bold mb-4">Follow Us</h2>
+          <div className="flex space-x-4 justify-center md:justify-start">
             <Link
               href="#"
               rel="noopener noreferrer"
@@ -130,7 +140,7 @@ export default function Footer() {
               <FaYoutube className="text-white text-lg xl:text-xl" />
             </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Bottom Section */}

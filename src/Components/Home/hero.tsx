@@ -20,7 +20,7 @@ export default function hero() {
         <div className="container h-full flex flex-col justify-center items-center">
           <div className="flex flex-col justify-center items-center">
             <motion.h1
-              className="text-center font-bold text-5xl xl:text-7xl text-white max-w-4xl xl:max-w-7xl"
+              className="text-center font-bold text-3xl md:text-5xl xl:text-7xl text-white max-w-4xl xl:max-w-7xl"
               style={{ fontFamily: "Montserrat" }}
               initial={{ y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -29,7 +29,7 @@ export default function hero() {
               Advanced Industrial & Municipal Water Treatment Solutions
             </motion.h1>
             <motion.h3
-              className="text-center px-4 mt-8 xl:mt-12 text-white text-lg xl:text-2xl max-w-3xl xl:max-w-5xl"
+              className="text-center px-2 md:px-4 mt-8 xl:mt-12 text-white text-sm md:text-lg xl:text-2xl max-w-3xl xl:max-w-5xl"
               style={{ fontFamily: "Epilogue" }}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}

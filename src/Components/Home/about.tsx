@@ -14,9 +14,9 @@ export default function about() {
       <div className="container mx-auto">
         <div className="w-full md:flex md:justify-between">
           {/* Left Section */}
-          <div className="w-3/5 text-white py-24 px-12 xl:px-24 bg-[#FFF] flex flex-col justify-center">
+          <div className="w-full md:w-3/5 text-white py-12 md:py-24 px-4 md:px-12 xl:px-24 bg-[#FFF] flex flex-col justify-center">
             <motion.h2
-              className="text-5xl xl:text-6xl text-[#0195B1] font-semibold font-montserrat"
+              className="text-4xl md:text-5xl xl:text-6xl text-[#0195B1] font-semibold font-montserrat"
               style={{ fontFamily: "Montserrat" }}
               {...textAnimationProps}
             >
@@ -35,7 +35,7 @@ export default function about() {
           </div>
 
           {/* Right Section */}
-          <div className="w-2/5 bg-white">
+          <div className="w-2/5 bg-white hidden md:block">
             <Image
               src={Aboutbg}
               alt="About Image"

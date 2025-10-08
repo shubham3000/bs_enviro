@@ -75,7 +75,7 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
 
   return (
     <header
-      className={`z-50 w-screen px-4 transition-all flex justify-center items-center ${
+      className={`z-50 w-screen px-2 md:px-4 transition-all flex justify-center items-center ${
         isScrolled ? "fixed top-0 shadow-md" : "absolute"
       }`}
       style={{
@@ -95,13 +95,13 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
                 <Image
                   src={isScrolled ? (isWhite ? LogoBlue : Logo) : Logo}
                   alt="B S Enviro Logo"
-                  className="h-8 xl:h-10 w-auto"
+                  className="md:h-8 xl:h-10 w-3/4 md:w-auto"
                 />
               </Link>
             </div>
 
             {/* Right Side */}
-            <div className="flex items-center space-x-8 py-2.5">
+            <div className="flex items-center md:space-x-8 md:py-2.5">
               <>
                 <motion.div
                   className={`${
@@ -110,7 +110,7 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
                         ? "border-[#0195B1]"
                         : "border-[#0195B1]"
                       : "border-white"
-                  } flex items-center gap-2 cursor-pointer font-semibold text-sm xl:text-lg border-2 px-4 py-2 xl:py-4 rounded-full transition-colors text-white `}
+                  } hidden md:flex items-center gap-2 cursor-pointer font-semibold text-sm xl:text-lg border-2 px-4 py-2 xl:py-4 rounded-full transition-colors text-white `}
                   whileTap={{ scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.6 }}
@@ -152,7 +152,7 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
                           ? "text-[#01959A] border-[#01959A]"
                           : "text-[#01959A] border-[#01959A]"
                         : "text-white border-white"
-                    } flex justify-center items-center w-20 border-2 px-2 xl:px-4 py-2 xl:py-4 cursor-pointer rounded-full`}
+                    } flex justify-center items-center w-10 md:w-20 border-2 px-0 md:px-2 xl:px-4 py-0 md:py-2 xl:py-4 cursor-pointer rounded-full`}
                   >
                     <IconMenu
                       className={`${
@@ -161,7 +161,7 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
                             ? "text-[#0195B1]"
                             : "text-[#0195B1]"
                           : "text-white"
-                      } transition-colors w-10 xl:w-20`}
+                      } transition-colors md:w-10 xl:w-20`}
                     />
                   </button>
                 </motion.div>
@@ -171,7 +171,7 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
 
           {/* Sidebar */}
           <motion.nav
-            className={`fixed top-0 left-0 h-full w-2/5 bg-[#233852] text-white transform transition-transform ${
+            className={`fixed top-0 left-0 h-full w-full md:w-2/5 bg-[#233852] text-white transform transition-transform ${
               sidebar ? "translate-x-0" : "-translate-x-full"
             }`}
           >
@@ -218,7 +218,8 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
                     <div>
                       <Link
                         href={item.path}
-                        className="text-5xl font-montserrat font-medium flex items-center"
+                        className="text-2xl xl:text-5xl font-medium flex items-center"
+                        style={{ fontFamily: "Montserrat" }}
                         onClick={() =>
                           item.subItems && toggleDropdown(item.title)
                         }
@@ -227,9 +228,9 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
                         {item.subItems && (
                           <span className="ml-2 cursor-pointer">
                             {dropdownOpen[item.title] ? (
-                              <IconChevronUp className="w-12 h-12" />
+                              <IconChevronUp className="w-8 xl:w-12 h-8 xl:h-12" />
                             ) : (
-                              <IconChevronDown className="w-12 h-12" />
+                              <IconChevronDown className="w-8 xl:w-12 h-8 xl:h-12" />
                             )}
                           </span>
                         )}
@@ -240,7 +241,8 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
                             <li key={subIndex}>
                               <Link
                                 href={subItem.path}
-                                className="text-2xl font-light flex items-center gap-2"
+                                style={{ fontFamily: "Montserrat" }}
+                                className="text-sm xl:text-2xl font-light flex items-center gap-2 opacity-65"
                                 onClick={showSidebar}
                               >
                                 {subItem.title}
@@ -252,6 +254,24 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
                     </div>
                   </motion.li>
                 ))}
+                <motion.div
+                  className={`flex md:hidden items-center gap-2 cursor-pointer font-semibold text-lg py-2 xl:py-4 rounded-full transition-colors text-white `}
+                  whileTap={{ scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.6 }}
+                  style={{ fontFamily: "Montserrat" }}
+                >
+                  <Link
+                    href="/documents/BSEnviro_Catalogue.pdf"
+                    className="text-white transition-colors"
+                    target="_blank"
+                  >
+                    Catalogue Download
+                  </Link>
+                  <IconDownload
+                    className="text-white transition-colors"
+                  />
+                </motion.div>
               </AnimatePresence>
             </motion.ul>
           </motion.nav>
