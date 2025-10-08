@@ -9,3 +9,12 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
+@theme inline {
+  --font-epilogue : 'Epilogue', sans-serif;
+  --font-montserrat : 'Montserrat', sans-serif;
+}
+
+@theme {
+  --breakpoint-xs: 375px;
+}

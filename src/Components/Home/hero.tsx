@@ -20,8 +20,7 @@ export default function hero() {
         <div className="container h-full flex flex-col justify-center items-center">
           <div className="flex flex-col justify-center items-center">
             <motion.h1
-              className="text-center font-bold text-3xl md:text-5xl xl:text-7xl text-white max-w-4xl xl:max-w-7xl"
-              style={{ fontFamily: "Montserrat" }}
+              className="text-center font-bold font-montserrat text-3xl xs:text-4xl md:text-5xl xl:text-7xl px-2 md:px-0 text-white max-w-4xl xl:max-w-7xl"
               initial={{ y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}
@@ -29,8 +28,7 @@ export default function hero() {
               Advanced Industrial & Municipal Water Treatment Solutions
             </motion.h1>
             <motion.h3
-              className="text-center px-2 md:px-4 mt-8 xl:mt-12 text-white text-sm md:text-lg xl:text-2xl max-w-3xl xl:max-w-5xl"
-              style={{ fontFamily: "Epilogue" }}
+              className="text-center px-2 md:px-4 mt-8 xl:mt-12 text-white font-epilogue text-sm md:text-lg xl:text-2xl max-w-3xl xl:max-w-5xl"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
@@ -40,8 +38,7 @@ export default function hero() {
             </motion.h3>
           </div>
           <motion.div
-            className="absolute bottom-8 text-white font-semibold text-sm xl:text-lg flex justify-center items-center gap-2 cursor-pointer"
-            style={{ fontFamily: "Montserrat" }}
+            className="absolute bottom-8 text-white font-montserrat font-semibold text-sm xl:text-lg flex justify-center items-center gap-2 cursor-pointer"
             initial={{ opacity: 0, scale: 0.5, y: 80 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 1, ease: "easeInOut" }}

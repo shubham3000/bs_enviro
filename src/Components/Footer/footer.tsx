@@ -17,8 +17,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 md:px-10 xl:px-6 py-12 flex flex-wrap justify-center lg:justify-between gap-8 lg:gap-12">
         {/* Left Section */}
         <motion.div
-          className="font-medium"
-          style={{ fontFamily: "Montserrat" }}
+          className="font-medium font-montserrat"
           {...popUpAnimationProps}
         >
           <Link href="/">
@@ -52,8 +51,7 @@ export default function Footer() {
 
         {/* Middle Section */}
         <motion.div
-          className="md:text-start flex space-x-8 xl:space-x-24"
-          style={{ fontFamily: "Montserrat" }}
+          className="md:text-start flex space-x-7 xs:space-x-24 md:space-x-8 xl:space-x-24 font-montserrat"
           {...popUpAnimationProps}
         >
           <div className="">
@@ -105,8 +103,7 @@ export default function Footer() {
 
         {/* Social Media Section */}
         <motion.div
-          className=""
-          style={{ fontFamily: "Montserrat" }}
+          className=" font-montserrat"
           {...popUpAnimationProps}
         >
           <h2 className="text-sm text-center lg:text-start xl:text-lg font-bold mb-4">Follow Us</h2>
@@ -146,8 +143,7 @@ export default function Footer() {
       {/* Bottom Section */}
       <div className="w-full bg-[#01959A] text-center py-4">
         <p
-          className="text-xs xl:text-sm opacity-65 font-semibold"
-          style={{ fontFamily: "Montserrat" }}
+          className="text-xs xl:text-sm opacity-65 font-semibold font-montserrat"
         >
           Copyright © 2007-{new Date().getFullYear()} B S Enviro & Infracon Pvt.
           Ltd. All Rights Reserved.

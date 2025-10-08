@@ -17,14 +17,12 @@ export default function about() {
           <div className="w-full md:w-3/5 text-white py-12 md:py-24 px-4 md:px-12 xl:px-24 bg-[#FFF] flex flex-col justify-center">
             <motion.h2
               className="text-4xl md:text-5xl xl:text-6xl text-[#0195B1] font-semibold font-montserrat"
-              style={{ fontFamily: "Montserrat" }}
               {...textAnimationProps}
             >
               About B S Enviro N Infracon Pvt Ltd
             </motion.h2>
             <motion.p
-              className="mt-6 text-sm xl:text-lg font-medium text-[#233852]"
-              style={{ fontFamily: "Epilogue" }}
+              className="mt-6 text-sm xl:text-lg font-medium text-[#233852] font-epilogue"
               {...textAnimationProps}
             >
               Established in 2002 with an intention of providing solutions for RECYCLING, REDUCING & REUSING Waste Water from various domestic & industrial activities. B S Enviro & Infracon Pvt. Ltd. has grown to be a world leading solution provider for water and wastewater treatment with offices in Pan India. Our team of highly skilled & dedicated Engineers, Managers, and Consultants & Technicians is led by Mr. Manish Singh the Managing Director of the company who has deep knowledge & has 25 years of total experience in this field.

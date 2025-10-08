@@ -30,7 +30,6 @@ module.exports = {
       fontFamily: {
         epilogue: ['var(--font-epilogue)'],
         montserrat: ['var(--font-montserrat)'],
-        bitcount: ['var(--font-bitcount)'],
       },
       colors: {
           green: "#01959A",
