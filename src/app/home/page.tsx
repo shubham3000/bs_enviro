@@ -1,9 +1,9 @@
-import About from '@/components/Home/about'
-import Footer from '@/components/Footer/footer'
+import About from '@/Components/Home/about'
+import Footer from '@/Components/Footer/footer'
 import React from 'react'
-import Header from '@/components/Header/header'
-import Hero from '@/components/Home/hero'
-import OurMission from '@/components/Home/ourMission'
+import Header from '@/Components/Header/header'
+import Hero from '@/Components/Home/hero'
+import OurMission from '@/Components/Home/ourMission'
 
 export default function page() {
   return (
