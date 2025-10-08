@@ -88,14 +88,14 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
     >
       <div className="container">
         <IconContext.Provider value={{ color: "#fff" }}>
-          <div className="flex items-center justify-between py-4">
+          <div className="flex items-center justify-between py-2 xl:py-4">
             {/* Logo */}
             <div className="flex items-center">
               <Link href="/">
                 <Image
                   src={isScrolled ? (isWhite ? LogoBlue : Logo) : Logo}
                   alt="B S Enviro Logo"
-                  className="h-10 w-auto"
+                  className="h-8 xl:h-10 w-auto"
                 />
               </Link>
             </div>
@@ -110,7 +110,7 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
                         ? "border-[#0195B1]"
                         : "border-[#0195B1]"
                       : "border-white"
-                  } flex items-center gap-2 cursor-pointer font-semibold border-2 px-4 py-4 rounded-full transition-colors text-white `}
+                  } flex items-center gap-2 cursor-pointer font-semibold text-sm xl:text-lg border-2 px-4 py-2 xl:py-4 rounded-full transition-colors text-white `}
                   whileTap={{ scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.6 }}
@@ -152,7 +152,7 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
                           ? "text-[#01959A] border-[#01959A]"
                           : "text-[#01959A] border-[#01959A]"
                         : "text-white border-white"
-                    } text-4xl flex justify-center items-center w-20 border-2 px-4 py-4 cursor-pointer rounded-full`}
+                    } flex justify-center items-center w-20 border-2 px-2 xl:px-4 py-2 xl:py-4 cursor-pointer rounded-full`}
                   >
                     <IconMenu
                       className={`${
@@ -161,7 +161,7 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
                             ? "text-[#0195B1]"
                             : "text-[#0195B1]"
                           : "text-white"
-                      } transition-colors w-20`}
+                      } transition-colors w-10 xl:w-20`}
                     />
                   </button>
                 </motion.div>
@@ -186,19 +186,18 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
               initial="hidden"
               animate={sidebar ? "visible" : "hidden"}
               variants={{
-                      visible: {
-                        opacity: 1,
-                        x: 0,
-                        transition: {
-                          delay: 0.3,
-                          duration: 0.3,
-                          ease: "easeInOut",
-                          staggerChildren: 1,
-                        },
-                      },
-                      hidden: { opacity: 0, x: -50 },
-                    }}
-              
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                  transition: {
+                    delay: 0.3,
+                    duration: 0.3,
+                    ease: "easeInOut",
+                    staggerChildren: 1,
+                  },
+                },
+                hidden: { opacity: 0, x: -50 },
+              }}
             >
               <AnimatePresence>
                 {SidebarData.map((item, index) => (
@@ -214,7 +213,6 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
                           ease: "easeInOut",
                         },
                       },
-                  
                     }}
                   >
                     <div>
