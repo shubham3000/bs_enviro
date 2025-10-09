@@ -20,7 +20,7 @@ export default function hero() {
         <div className="container h-full flex flex-col justify-center items-center">
           <div className="flex flex-col justify-center items-center">
             <motion.h1
-              className="text-center font-bold font-montserrat text-3xl xs:text-4xl md:text-5xl xl:text-7xl px-2 md:px-0 text-white max-w-4xl xl:max-w-7xl"
+              className="text-center font-bold font-montserrat text-3xl md:text-5xl xl:text-7xl px-2 md:px-0 text-white max-w-4xl xl:max-w-7xl"
               initial={{ y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}
