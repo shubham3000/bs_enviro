@@ -1,0 +1,223 @@
+[
+  {
+    "title": "O&M",
+    "heading": "Operation & Maintenance (O&M)",
+    "description": "At B S Enviro & Infracon Pvt Ltd, we don’t just build systems — we keep them running at peak performance with reliable, efficient, and sustainable O&M services.",
+    "approach": [
+      {
+        "title": "Ongoing Support & Care",
+        "content": "We provide continuous operational support to keep water and wastewater treatment systems running smoothly and efficiently."
+      },
+      {
+        "title": "Smart Monitoring",
+        "content": "Leveraging advanced methodologies, we proactively monitor system performance, identify potential issues early, and implement timely solutions to minimize downtime."
+      },
+      {
+        "title": "Routine Inspections",
+        "content": "Regular system checks and fine-tuning ensure peak efficiency, compliance, and extended asset life."
+      },
+      {
+        "title": "Preventive Maintenance",
+        "content": "By focusing on preventive measures, we reduce unexpected breakdowns, enhance system reliability, and optimize overall performance."
+      },
+      {
+        "title": "Commitment to Excellence",
+        "content": "Our dedicated team is committed to delivering exceptional service, ensuring that every client enjoys long-term value and peace of mind."
+      }
+    ],
+    "benefits": [
+      {
+        "content": "Maximized productivity"
+      },
+      {
+        "content": "Reduced downtime"
+      },
+      {
+        "content": "Improved system reliability"
+      },
+      {
+        "content": "Extended equipment life"
+      },
+      {
+        "content": "Strong, trust-based client partnerships"
+      }
+    ],
+    "image": "/assests/Services1.png"
+  },
+  {
+    "title": "AMC",
+    "heading": "Annual Maintenance Contract (AMC)",
+    "description": "At B S Enviro & Infracon Pvt Ltd, our Annual Maintenance Contracts ensure systems stay efficient, reliable, and compliant with hassle-free upkeep and long-term support.",
+    "approach": [
+      {
+        "title": "Scheduled Maintenance",
+        "content": "Regularly planned servicing to keep systems operating at optimum performance."
+      },
+      {
+        "title": "Preventive Care",
+        "content": "Early detection and resolution of issues to reduce downtime and extend system life."
+      },
+      {
+        "title": "Timely Support",
+        "content": "Dedicated technical support and quick response to ensure smooth, uninterrupted operations."
+      },
+      {
+        "title": "Customized Solutions",
+        "content": "Flexible AMC packages designed to suit the specific requirements of each client."
+      },
+      {
+        "title": "Sustainable Performance",
+        "content": "Helping clients achieve long-term efficiency, reliability, and compliance with minimal effort."
+      }
+    ],
+    "benefits": [
+      {
+        "content": "Consistent system performance"
+      },
+      {
+        "content": "Reduced breakdowns and downtime"
+      },
+      {
+        "content": "Extended equipment lifespan"
+      },
+      {
+        "content": "Cost-effective, worry-free upkeep"
+      },
+      {
+        "content": "Long-term peace of mind"
+      }
+    ],
+    "image": "/assests/Services2.png"
+  },
+  {
+    "title": "Consultancy & Engineering",
+    "heading": "Consultancy & Engineering",
+    "description": "At B S Enviro & Infracon Pvt Ltd, our Consulting & Engineering services help clients design and implement sustainable water solutions that ensure efficiency, compliance, and long-term value.",
+    "approach": [
+      {
+        "title": "Comprehensive Assessments",
+        "content": "We evaluate client requirements, resource consumption, and compliance needs to build the right foundation for every project."
+      },
+      {
+        "title": "Customized System Design",
+        "content": "Tailored engineering solutions that maximize efficiency, reduce costs, and ensure long-term reliability."
+      },
+      {
+        "title": "Risk & Compliance Management",
+        "content": "Identifying potential challenges and integrating solutions that meet environmental regulations, ESG goals, and industry best practices."
+      },
+      {
+        "title": "Economic & Technical Feasibility",
+        "content": "Detailed cost-benefit and feasibility analysis to help clients make informed investment decisions."
+      },
+      {
+        "title": "Sustainable Engineering",
+        "content": "Innovative designs that integrate efficiency, resilience, and sustainability for future-ready operations."
+      }
+    ],
+    "benefits": [
+      {
+        "content": "Optimized water and wastewater management"
+      },
+      {
+        "content": "Cost-effective, tailored engineering solutions"
+      },
+      {
+        "content": "Compliance with environmental and regulatory norms"
+      },
+      {
+        "content": "Enhanced operational efficiency and resilience"
+      },
+      {
+        "content": "Long-term value creation for clients"
+      }
+    ],
+    "image": "/assests/Services3.png"
+  },
+  {
+    "title": "EPC",
+    "heading": "EPC (Engineering, Procurement & Construction)",
+    "description": "At B S Enviro & Infracon Pvt Ltd, our EPC services provide turnkey water solutions — from design to construction — ensuring projects are delivered with precision, efficiency, and sustainability.",
+    "approach": [
+      {
+        "title": "Engineering Excellence",
+        "content": "Innovative and customized designs that align with client needs, regulatory standards, and sustainability goals."
+      },
+      {
+        "title": "Efficient Procurement",
+        "content": "Sourcing high-quality equipment and materials to guarantee system durability, cost-effectiveness, and timely delivery."
+      },
+      {
+        "title": "Reliable Construction",
+        "content": "On-time and on-budget execution with strict adherence to quality, safety, and compliance standards."
+      },
+      {
+        "title": "Turnkey Delivery",
+        "content": "Single-point accountability for the entire project lifecycle — from planning to handover."
+      },
+      {
+        "title": "Sustainability Focus",
+        "content": "Integrating eco-friendly practices and future-ready technologies into every project."
+      }
+    ],
+    "benefits": [
+      {
+        "content": "Seamless project execution"
+      },
+      {
+        "content": "Reduced risks and single-point accountability"
+      },
+      {
+        "content": "Cost and time efficiency"
+      },
+      {
+        "content": "High-quality, sustainable outcomes"
+      },
+      {
+        "content": "Peace of mind with end-to-end solutions"
+      }
+    ],
+    "image": "/assests/Services4.png"
+  },
+  {
+    "title": "Smart & Green Technologies",
+    "heading": "Smart & Green Technologies",
+    "description": "At B S Enviro & Infracon Pvt Ltd, our Smart & Green Technologies blend innovation with sustainability to deliver efficient, resilient, and eco-friendly water solutions.",
+    "approach": [
+      {
+        "title": "Digital Innovation",
+        "content": "Using smart monitoring, automation, and data-driven insights to enhance system performance and reliability."
+      },
+      {
+        "title": "Eco-Friendly Solutions",
+        "content": "Incorporating green technologies that reduce energy consumption, optimize resource use, and minimize carbon footprint."
+      },
+      {
+        "title": "Sustainable Design",
+        "content": "Engineering systems that prioritize water recycling, reuse, and long-term environmental balance."
+      },
+      {
+        "title": "Future-Ready Infrastructure",
+        "content": "Building intelligent, adaptable solutions that align with global ESG goals and Sustainable Development Goals (SDGs)."
+      }
+    ],
+    "benefits": [
+      {
+        "content": "Optimized water and energy usage"
+      },
+      {
+        "content": "Reduced operational costs"
+      },
+      {
+        "content": "Lower environmental footprint"
+      },
+      {
+        "content": "Smarter, more resilient infrastructure"
+      },
+      {
+        "content": "Contribution to sustainability goals"
+      }
+    ],
+    "image": "/assests/Services5.png"
+  }
+]

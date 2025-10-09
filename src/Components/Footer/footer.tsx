@@ -51,7 +51,7 @@ export default function Footer() {
 
         {/* Middle Section */}
         <motion.div
-          className="md:text-start flex space-x-7 xs:space-x-24 md:space-x-8 xl:space-x-24 font-montserrat"
+          className="md:text-start flex space-x-24 xs:space-x-24 md:space-x-8 xl:space-x-24 font-montserrat"
           {...popUpAnimationProps}
         >
           <div className="">

@@ -12,8 +12,8 @@ export default function OurMission() {
   return (
     <section className="w-screen overflow-hidden flex flex-col justify-center items-center relative">
       {/* Overflow Background */}
-      <div className=" bg-[#01959A] absolute top-0 left-0 w-full md:w-3/5 h-full -z-10"></div>
-      <div className=" bg-[#FFF] absolute top-0 right-0 w-full md:w-2/5 h-full -z-10"></div>
+      <div className="bg-[#01959A] absolute top-0 left-0 w-full md:w-3/5 h-full -z-10"></div>
+      <div className="md:bg-[#FFF] absolute top-0 right-0 w-full md:w-2/5 h-full -z-10"></div>
       <div className="container mx-auto">
         <div className="w-full md:flex md:justify-between">
           {/* Left Section */}

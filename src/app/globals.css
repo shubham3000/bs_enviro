@@ -18,3 +18,17 @@ body {
 @theme {
   --breakpoint-xs: 425px;
 }
+
+.react-tabs__tab--selected{
+  background: none !important;
+  color: white !important;
+  border-bottom: 2px solid white !important;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

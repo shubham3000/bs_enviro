@@ -23,6 +23,7 @@
       "@/Components/*": ["./src/Components/*"],
       "@/assests/*": ["./public/assests/*"],
       "@/animation/*": ["./src/animation/*"],
+      "@/data/*": ["./src/data/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

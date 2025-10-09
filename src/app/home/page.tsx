@@ -6,6 +6,7 @@ import Hero from '@/Components/Home/hero'
 import OurMission from '@/Components/Home/ourMission'
 import OurJourney from '@/Components/Home/ourJourney'
 import OurSolution from '@/Components/Home/ourSolution'
+import OurServices from '@/Components/Home/ourServices'
 
 export default function page() {
   return (
@@ -16,6 +17,7 @@ export default function page() {
     <OurMission/>
     <About/>
     <OurJourney/>
+    <OurServices/> 
     <OurSolution/>
     <Footer/>
     </main>
