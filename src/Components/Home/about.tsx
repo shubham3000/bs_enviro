@@ -9,12 +9,12 @@ export default function about() {
   return (
     <section className="w-screen overflow-hidden flex flex-col justify-center items-center relative">
       {/* Overflow Background */}
-      <div className=" bg-white absolute top-0 left-0 w-3/5 h-full -z-10"></div>
-      <div className="bg-white absolute top-0 right-0 w-2/5 h-full -z-10"></div>
+      <div className=" bg-[#F5FAFE] absolute top-0 left-0 w-3/5 h-full -z-10"></div>
+      <div className="bg-[#F5FAFE] absolute top-0 right-0 w-2/5 h-full -z-10"></div>
       <div className="container mx-auto">
         <div className="w-full md:flex md:justify-between">
           {/* Left Section */}
-          <div className="w-full md:w-3/5 text-white py-12 md:py-24 px-4 md:px-12 xl:px-24 bg-[#FFF] flex flex-col justify-center">
+          <div className="w-full md:w-3/5 text-white py-12 md:py-24 px-4 md:px-12 xl:px-24 bg-[#F5FAFE] flex flex-col justify-center">
             <motion.h2
               className="text-4xl md:text-5xl xl:text-6xl text-[#0195B1] font-semibold font-montserrat"
               {...textAnimationProps}
@@ -27,7 +27,7 @@ export default function about() {
             >
               Established in 2002 with an intention of providing solutions for
               RECYCLING, REDUCING & REUSING Waste Water from various domestic &
-              industrial activities. B S Enviro & Infracon PVT. LTD. has grown
+              industrial activities. B S Enviro N Infracon PVT. LTD. has grown
               to be a world leading sol ution provider for water and wastewater
               treatment with offices in Pan India. 
               <br/>
@@ -49,7 +49,7 @@ export default function about() {
           </div>
 
           {/* Right Section */}
-          <div className="w-2/5 bg-white hidden md:block">
+          <div className="w-2/5 bg-[#F5FAFE] hidden md:block">
             <Image
               src={Aboutbg}
               alt="About Image"

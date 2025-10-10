@@ -38,7 +38,7 @@ export default function ourJourney() {
                   <CountUp end={500} duration={2} />+
                 </h2>
                 <p className="font-montserrat font-medium text-base xl:text-2xl text-white">
-                  Successful Projects
+                  Successfull Projects
                 </p>
               </div>
             </div>

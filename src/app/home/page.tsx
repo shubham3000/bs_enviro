@@ -8,6 +8,7 @@ import OurJourney from '@/Components/Home/ourJourney'
 import OurSolution from '@/Components/Home/ourSolution'
 import OurServices from '@/Components/Home/ourServices'
 import OurVission from '@/Components/Home/ourVission'
+import OurHighlights from '@/Components/Home/ourHighlights'
 
 export default function page() {
   return (
@@ -18,6 +19,7 @@ export default function page() {
     {/* <OurMission/> */}
     <OurVission/>
     <About/>
+    <OurHighlights/>
     <OurJourney/>
     <OurServices/> 
     <OurSolution/>

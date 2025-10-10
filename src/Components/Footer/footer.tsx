@@ -145,7 +145,7 @@ export default function Footer() {
         <p
           className="text-xs xl:text-sm opacity-65 font-semibold font-montserrat"
         >
-          Copyright © 2007-{new Date().getFullYear()} B S Enviro & Infracon Pvt.
+          Copyright © 2007-{new Date().getFullYear()} B S Enviro N Infracon Pvt.
           Ltd. All Rights Reserved.
         </p>
       </div>

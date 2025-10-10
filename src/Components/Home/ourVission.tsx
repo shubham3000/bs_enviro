@@ -31,7 +31,7 @@ export default function ourVission() {
                 Vision
               </motion.h1>
               <motion.p
-                className="text-sm xl:text-lg text-[#233852] font-normal lg:w-5/6 pl-4 md:text-left mt-4 xl:mt-8 font-epilogue"
+                className="text-sm xl:text-lg text-[#233852] font-normal lg:w-5/6 md:pl-4 md:text-left mt-4 xl:mt-8 font-epilogue"
                 {...popUpAnimationProps}
               >
                 Our Vision is to become a world class company in the field of
@@ -52,7 +52,7 @@ export default function ourVission() {
                 Mission
               </motion.h1>
               <motion.p
-                className="text-sm xl:text-lg text-[#233852] font-normal lg:w-5/6 pl-4 md:text-left mt-4 xl:mt-8 font-epilogue"
+                className="text-sm xl:text-lg text-[#233852] font-normal lg:w-5/6 md:pl-4 md:text-left mt-4 xl:mt-8 font-epilogue"
                 {...popUpAnimationProps}
               >
                 Our Mission is to fully integrate environmental stewardship into
@@ -72,7 +72,7 @@ export default function ourVission() {
                 Vision
               </motion.h1>
               <motion.p
-                className="text-sm xl:text-lg text-[#233852] font-normal lg:w-5/6 pl-4 md:text-left mt-4 xl:mt-8 font-epilogue"
+                className="text-sm xl:text-lg text-[#233852] font-normal lg:w-5/6 md:pl-4 md:text-left mt-4 xl:mt-8 font-epilogue"
                 {...popUpAnimationProps}
               >
                 Our Vision is to become a world class company in the field of
