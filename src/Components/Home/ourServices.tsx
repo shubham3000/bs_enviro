@@ -1,61 +1,79 @@
 "use client";
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import Image from "next/image";
+import Slider from "react-slick";
 import { IconChevronDown } from "@tabler/icons-react";
 import services from "@/data/servicesData.json";
 
 export default function OurServices() {
+  const sliderRef = useRef<any>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: false,
+    beforeChange: (_: any, next: number) => setActiveIndex(next),
+  };
+
+  const handleTabClick = (index: number) => {
+    setActiveIndex(index);
+    sliderRef.current?.slickGoTo(index);
+  };
+
   return (
-   <section className="relative w-screen overflow-hidden text-white py-16">
-  {/* Background */}
-  <div className="absolute inset-0">
-    {/* Top Half - Blue */}
-    <div className="h-1/2 bg-[#233852]" />
+    <section className="relative w-screen overflow-hidden text-white py-16">
+      {/* Background */}
+      <div className="absolute inset-0">
+        <div className="h-1/2 bg-[#233852]" />
+        <div className="h-1/2 bg-white relative">
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(circle at 80% 80%, rgba(117, 181, 183, 0.5), transparent 60%)",
+            }}
+          ></div>
+        </div>
+      </div>
 
-    {/* Bottom Half - White base with soft green tint on right corner */}
-    <div className="h-1/2 bg-white relative">
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(circle at 80% 80%, rgba(117, 181, 183, 0.5), transparent 60%)",
-        }}
-      ></div>
-    </div>
-  </div>
+      <div className="relative z-10 container mx-auto px-6 md:px-12 lg:py-12">
+        <h2 className="text-4xl md:text-5xl xl:text-6xl font-semibold font-montserrat text-center mb-12 text-white">
+          Our Services
+        </h2>
 
-  {/* Foreground Content */}
-  <div className="relative z-10 container mx-auto px-6 md:px-12 lg:py-12">
-    <h2 className="text-4xl md:text-5xl xl:text-6xl font-semibold font-montserrat text-center mb-12 text-white">
-      Our Services
-    </h2>
+        <Tabs selectedIndex={activeIndex} onSelect={(index) => handleTabClick(index)}>
+          <TabList className="flex justify-start lg:justify-center overflow-x-auto xl:overflow-x-visible whitespace-nowrap space-x-6 md:space-x-12 mb-8 font-montserrat scrollbar-hide 2xl:justify-center">
+            {services.map((service, index) => (
+              <Tab
+                key={index}
+                className={`text-sm xl:text-base font-bold py-2 px-4 border-b-2 border-transparent cursor-pointer focus:outline-none hover:border-white ${
+                  activeIndex === index ? "text-white border-white" : "text-gray-400"
+                }`}
+                selectedClassName="text-white border-white"
+              >
+                {service.title}
+              </Tab>
+            ))}
+          </TabList>
 
-    <Tabs>
-      <TabList
-        className="flex justify-start lg:justify-center overflow-x-auto xl:overflow-x-visible whitespace-nowrap space-x-6 md:space-x-12 mb-8 font-montserrat scrollbar-hide 2xl:justify-center"
-      >
-        {services.map((service, index) => (
-          <Tab
-            key={index}
-            className="text-sm xl:text-base text-gray-400 font-bold py-2 px-4 border-b-2 border-transparent cursor-pointer focus:outline-none hover:border-white"
-            selectedClassName="text-white border-white"
-          >
-            {service.title}
-          </Tab>
-        ))}
-      </TabList>
-
-      {services.map((service, index) => (
-        <TabPanel key={index}>
-          <ExpandableServiceCard service={service} />
-        </TabPanel>
-      ))}
-    </Tabs>
-  </div>
-</section>
-
+          {/* Slider for Tab Panels */}
+          <Slider ref={sliderRef} {...settings}>
+            {services.map((service, index) => (
+              <TabPanel key={index}>
+                <ExpandableServiceCard service={service} />
+              </TabPanel>
+            ))}
+          </Slider>
+        </Tabs>
+      </div>
+    </section>
   );
 }
 

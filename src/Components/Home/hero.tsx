@@ -25,7 +25,7 @@ export default function hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}
             >
-              Advanced Industrial & Municipal Water Treatment Solutions
+              A Complete <br/> Water & Waste Water Solution
             </motion.h1>
             <motion.h3
               className="text-center px-2 md:px-4 mt-8 xl:mt-12 text-white font-epilogue text-sm md:text-lg xl:text-2xl max-w-3xl xl:max-w-5xl"

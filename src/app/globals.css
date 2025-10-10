@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @tailwind utilities;
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 
 body {
   background-color: black;
@@ -29,6 +31,6 @@ body {
   display: none;
 }
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
 }
