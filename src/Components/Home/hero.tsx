@@ -2,6 +2,7 @@
 import { IconArrowDown } from "@tabler/icons-react";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function hero() {
   return (
@@ -25,7 +26,7 @@ export default function hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}
             >
-              A Complete <br/> Water & Waste Water Solution
+              A Complete <br /> Water & Waste Water Solution
             </motion.h1>
             <motion.h3
               className="text-center px-2 md:px-4 mt-8 xl:mt-12 text-white font-epilogue text-sm md:text-lg xl:text-2xl max-w-3xl xl:max-w-5xl"
@@ -38,7 +39,7 @@ export default function hero() {
             </motion.h3>
           </div>
           <motion.div
-            className="absolute bottom-8 text-white font-montserrat font-semibold text-sm xl:text-lg flex justify-center items-center gap-2 cursor-pointer"
+            className="absolute bottom-8 text-white font-montserrat font-semibold text-sm xl:text-lg gap-2 cursor-pointer"
             initial={{ opacity: 0, scale: 0.5, y: 80 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 1, ease: "easeInOut" }}
@@ -46,8 +47,10 @@ export default function hero() {
               once: true,
             }}
           >
-            <p>Scroll Down</p>
-            <IconArrowDown />
+            <Link href="#VisionMissionGoal" scroll={true} className="flex justify-center items-center">
+              <p>Scroll Down</p>
+              <IconArrowDown />
+            </Link>
           </motion.div>
         </div>
       </motion.section>

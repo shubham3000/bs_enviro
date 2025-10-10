@@ -7,6 +7,7 @@ import OurMission from '@/Components/Home/ourMission'
 import OurJourney from '@/Components/Home/ourJourney'
 import OurSolution from '@/Components/Home/ourSolution'
 import OurServices from '@/Components/Home/ourServices'
+import OurVission from '@/Components/Home/ourVission'
 
 export default function page() {
   return (
@@ -14,7 +15,8 @@ export default function page() {
     <Header isWhite={true} />
     <main className="max-w-screen-2xl">
     <Hero/>
-    <OurMission/>
+    {/* <OurMission/> */}
+    <OurVission/>
     <About/>
     <OurJourney/>
     <OurServices/> 

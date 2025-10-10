@@ -10,7 +10,7 @@ import { popUpAnimationProps, textAnimationProps } from "@/animation/Framer";
 
 export default function OurMission() {
   return (
-    <section className="w-screen overflow-hidden flex flex-col justify-center items-center relative">
+    <section className="w-screen overflow-hidden flex flex-col justify-center items-center relative" id='ourMission'>
       {/* Overflow Background */}
       <div className="bg-[#01959A] absolute top-0 left-0 w-full md:w-3/5 h-full -z-10"></div>
       <div className="md:bg-[#FFF] absolute top-0 right-0 w-full md:w-2/5 h-full -z-10"></div>
@@ -66,7 +66,7 @@ export default function OurMission() {
                 <div className="text-lg md:text-xl xl:text-3xl font-semibold">QUALITY</div>
                 <div className="border-t opacity-25 border-white w-full"></div>
                 <p className="opacity-75 font-medium text-sm xl:text-lg">
-                  BS Enviro system, services quality & customers satisfaction is
+                  B S Enviro system, services quality & customers satisfaction is
                   the primary goal of our company.
                 </p>
               </motion.div>
@@ -85,7 +85,7 @@ export default function OurMission() {
               className="mt-6 text-sm xl:text-lg font-medium text-[#233852] font-epilogue"
               {...textAnimationProps}
             >
-              At B S Enviro & Infracon Pvt Ltd, our mission is to be a globally
+              At B S Enviro N Infracon Pvt Ltd, our mission is to be a globally
               trusted name in water treatment and conservation. We’re dedicated
               to providing cutting-edge, sustainable, and efficient solutions to
               industrial and municipal water challenges. By enabling recycling,

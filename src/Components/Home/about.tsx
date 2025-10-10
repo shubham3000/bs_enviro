@@ -1,8 +1,8 @@
-"use client"
-import React from 'react'
+"use client";
+import React from "react";
 import Image from "next/image";
-import {motion} from "framer-motion";
-import { textAnimationProps } from '@/animation/Framer';
+import { motion } from "framer-motion";
+import { textAnimationProps } from "@/animation/Framer";
 import Aboutbg from "@/assests/Aboutbg.png";
 
 export default function about() {
@@ -25,10 +25,26 @@ export default function about() {
               className="mt-6 text-sm xl:text-lg font-medium text-[#233852] font-epilogue"
               {...textAnimationProps}
             >
-              Established in 2002 with an intention of providing solutions for RECYCLING, REDUCING & REUSING Waste Water from various domestic & industrial activities. B S Enviro & Infracon Pvt. Ltd. has grown to be a world leading solution provider for water and wastewater treatment with offices in Pan India. Our team of highly skilled & dedicated Engineers, Managers, and Consultants & Technicians is led by Mr. Manish Singh the Managing Director of the company who has deep knowledge & has 25 years of total experience in this field.
+              Established in 2002 with an intention of providing solutions for
+              RECYCLING, REDUCING & REUSING Waste Water from various domestic &
+              industrial activities. B S Enviro & Infracon PVT. LTD. has grown
+              to be a world leading sol ution provider for water and wastewater
+              treatment with offices in Pan India. 
               <br/>
               <br/>
-              We are committed to deliver high-grade quality products for cleaning water coming from diverse industries like residential, sewage, municipal, hotel etc.
+              The economy on our future
+              world relies on Green technologies and Waste Management. We are an
+              established and popular company with an excellent record of
+              accomplishment in Water Management field. BS Enviro is green
+              initiative company with tremendous growth in short span of time.
+              We provide solutions and services Water Management technology. We
+              took a step forward to make environment clean. Our prime focus is
+              on Water & Waste-Water Treatment Plants, We are leading firm in
+              this field and have outstanding proven works. We have wel I
+              qualified and experienced staff and with their best ideas we deal
+              with aerobic technologies like MBBR, SBR, MBR, Advanced MBBR (PVA
+              GEL) etc. We deal in designing and Execution of Water & Waste -
+              Water Management projects.
             </motion.p>
           </div>
 
@@ -43,7 +59,7 @@ export default function about() {
             />
           </div>
         </div>
-          </div>
+      </div>
     </section>
-  )
+  );
 }
