@@ -15,9 +15,8 @@ export default function OurServices() {
     infinite: true,
     speed: 600,
     slidesToShow: 1,
-    slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 5000,
     arrows: false,
     beforeChange: (_: any, next: number) => setActiveIndex(next),
   };

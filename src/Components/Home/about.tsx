@@ -4,6 +4,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { textAnimationProps } from "@/animation/Framer";
 import Aboutbg from "@/assests/Aboutbg.png";
+import Link from "next/link";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function about() {
   return (
@@ -28,24 +30,28 @@ export default function about() {
               Established in 2002 with an intention of providing solutions for
               RECYCLING, REDUCING & REUSING Waste Water from various domestic &
               industrial activities. B S Enviro N Infracon PVT. LTD. has grown
-              to be a world leading sol ution provider for water and wastewater
-              treatment with offices in Pan India. 
-              <br/>
-              <br/>
-              The economy on our future
-              world relies on Green technologies and Waste Management. We are an
-              established and popular company with an excellent record of
-              accomplishment in Water Management field. BS Enviro is green
-              initiative company with tremendous growth in short span of time.
-              We provide solutions and services Water Management technology. We
-              took a step forward to make environment clean. Our prime focus is
-              on Water & Waste-Water Treatment Plants, We are leading firm in
-              this field and have outstanding proven works. We have wel I
-              qualified and experienced staff and with their best ideas we deal
-              with aerobic technologies like MBBR, SBR, MBR, Advanced MBBR (PVA
-              GEL) etc. We deal in designing and Execution of Water & Waste -
-              Water Management projects.
+              to be a world leading solution provider for water and wastewater
+              treatment with offices in Pan India.
+              <br />
+              <br />
+              The economy on our future world relies on Green technologies and
+              Waste Management. We are an established and popular company with
+              an excellent record of accomplishment in Water Management field. B
+              S Enviro is green initiative company with tremendous growth in
+              short span of time. We provide solutions and services Water
+              Management technology. We took a step forward to make environment
+              clean. Our prime focus is on Water & Waste-Water Treatment Plants,
+              We are leading firm in this field and have outstanding proven
+              works. We have well qualified and experienced staff and with their
+              best ideas we deal with aerobic technologies like MBBR, SBR, MBR,
+              Advanced MBBR (PVA GEL) etc. We deal in designing and Execution of
+              Water & Waste - Water Management projects.
             </motion.p>
+            <Link href={"/aboutus"}>
+              <p className=" p-4 xl:p-6 mt-12 border rounded-full border-[#233852] w-12 xl:w-16 h-12 xl:h-16 flex justify-center items-center">
+                <FaArrowRightLong className="text-[#233852]" />
+              </p>
+            </Link>
           </div>
 
           {/* Right Section */}

@@ -37,7 +37,7 @@ export default function ourVission() {
                 Our Vision is to become a world class company in the field of
                 Water Management technology. We want to achieve the top most
                 position in the area of Water Management technology and service
-                providers
+                providers.
               </motion.p>
             </div>
           </div>
@@ -78,7 +78,7 @@ export default function ourVission() {
                 Our Vision is to become a world class company in the field of
                 Water Management technology. We want to achieve the top most
                 position in the area of Water Management technology and service
-                providers
+                providers.
               </motion.p>
             </div>
           </div>

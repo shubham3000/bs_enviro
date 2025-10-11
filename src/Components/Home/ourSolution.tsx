@@ -40,7 +40,7 @@ export default function ourSolution() {
                     className="text-sm lg:text-base xl:text-xl lg:w-3/4 border-l-2 border-[#0195B1] pl-4 md:text-left"
                     {...textAnimationProps}
                   >
-                    BS Enviro provides reliable sewage treatment and recycling
+                    B S Enviro provides reliable sewage treatment and recycling
                     solutions for residential, commercial, and industrial needs,
                     ensuring clean water, compliance with standards, and
                     sustainable resource management.
@@ -108,7 +108,7 @@ export default function ourSolution() {
                     className="text-sm lg:text-base xl:text-xl lg:w-3/4 border-l-2 border-[#0195B1] pl-4 md:text-left font-arimo"
                     {...textAnimationProps}
                   >
-                    BS Enviro designs efficient Air Pollution Control systems
+                    B S Enviro designs efficient Air Pollution Control systems
                     like bag filters and scrubbers, ensuring emission
                     compliance, reducing harmful gases, and promoting healthier,
                     cleaner air for industries.
