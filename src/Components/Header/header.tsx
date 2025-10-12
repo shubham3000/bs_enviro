@@ -53,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
         { title: "Fabricated Items (Fl)", path: "/products/fabricatedItem" },
       ],
     },
-    { title: "Projects", path: "/projects" },
+    // { title: "Projects", path: "/projects" },
     // { title: "Careers", path: "/careers" },
     { title: "Contact Us", path: "/contactus" },
   ];

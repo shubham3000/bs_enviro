@@ -6,6 +6,7 @@ import WhoWeAre from '@/Components/AboutUs/whoWeAre'
 import WhyBsEnviro from '@/Components/AboutUs/whyBSEnviro'
 import OurClinets from '@/Components/AboutUs/ourClients'
 import AppointmentBanner from '@/Components/Partials/appointmentBanner'
+import AboutVideo from '@/Components/AboutUs/aboutVideo'
 
 export default function page() {
   return (
@@ -15,6 +16,7 @@ export default function page() {
         <HeroBg heading='About <br/> B S Enviro' imageurl='/assests/aboutherobg.png'/>
         <WhoWeAre/>
         <WhyBsEnviro/>
+        <AboutVideo/>
         <OurClinets/>
         <AppointmentBanner/>
       </main>

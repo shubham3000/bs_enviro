@@ -1,0 +1,72 @@
+"use client";
+
+import React from "react";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
+import { sewageTreatmentPlant } from "@/data/sewageTreatmentPlant";
+import { motion } from "framer-motion";
+import { textAnimationProps } from "@/animation/Framer";
+import Image, { StaticImageData } from "next/image";
+
+// ✅ Define proper interface with StaticImageData for Next.js images
+interface TabData {
+  id: string;
+  label: string;
+  title: string;
+  image?: StaticImageData;
+  description?: string;
+}
+
+const SewageTreatmentPlant: React.FC = () => {
+  return (
+    <section className="w-screen min-h-screen pb-16 md:pb-24 px-4 md:px-12 xl:px-24 bg-white overflow-hidden">
+      <div className="container mx-auto">
+        <Tabs>
+          <TabList className="flex border-b border-gray-300 mb-6 overflow-x-auto no-scrollbar mt-2 lg:mt-6">
+            {sewageTreatmentPlant.map((tab: TabData) => (
+              <Tab
+                key={tab.id}
+                className="px-6 py-3 text-lg md:text-xl xl:text-2xl text-[#233852] cursor-pointer hover:text-[#0195B1] focus:outline-none whitespace-nowrap transition-colors duration-300 font-montserrat font-semibold"
+                selectedClassName="border-b-4 border-[#0195B1] !text-[#0195B1] font-semibold"
+              >
+                {tab.label}
+              </Tab>
+            ))}
+          </TabList>
+
+          {sewageTreatmentPlant.map((tab: TabData) => (
+            <TabPanel key={tab.id}>
+              <div className="space-y-8 mt-8">
+                {tab.image && (
+                  <div className="flex justify-center">
+                    <Image
+                      src={tab.image}
+                      alt={tab.label}
+                      className="w-full max-w-4xl"
+                    />
+                  </div>
+                )}
+
+                <motion.h2
+                  className="text-3xl md:text-5xl xl:text-6xl text-[#0195B1] font-semibold font-montserrat mt-12"
+                  {...textAnimationProps}
+                >
+                  {tab.title}
+                </motion.h2>
+
+                {tab.description && (
+                  <div
+                    className="text-base md:text-lg leading-relaxed text-[#233852] font-epilogue font-normal text-justify space-y-4"
+                    dangerouslySetInnerHTML={{ __html: tab.description }}
+                  />
+                )}
+              </div>
+            </TabPanel>
+          ))}
+        </Tabs>
+      </div>
+    </section>
+  );
+};
+
+export default SewageTreatmentPlant;
