@@ -50,7 +50,7 @@ export default function about() {
 
             <p className=" p-4 xl:p-6 mt-12 border rounded-full border-[#233852] w-12 xl:w-16 h-12 xl:h-16 flex justify-center items-center">
               <Link href={"/aboutus"}>
-                <FaArrowRightLong className="text-[#233852]" />{" "}
+                <FaArrowRightLong className="text-[#233852]" />
               </Link>
             </p>
           </div>

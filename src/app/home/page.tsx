@@ -9,6 +9,7 @@ import OurSolution from "@/Components/Home/ourSolution";
 import OurServices from "@/Components/Home/ourServices";
 import OurVission from "@/Components/Home/ourVission";
 import OurHighlights from "@/Components/Home/ourHighlights";
+import AppointmentBanner from "@/Components/Partials/appointmentBanner";
 
 export default function page() {
   return (
@@ -23,6 +24,7 @@ export default function page() {
         <OurJourney />
         <OurServices />
         <OurSolution />
+        <AppointmentBanner/>
       </main>
       <Footer />
     </div>

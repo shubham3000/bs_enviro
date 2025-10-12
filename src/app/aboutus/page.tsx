@@ -5,6 +5,7 @@ import HeroBg from "@/Components/Partials/herobg"
 import WhoWeAre from '@/Components/AboutUs/whoWeAre'
 import WhyBsEnviro from '@/Components/AboutUs/whyBSEnviro'
 import OurClinets from '@/Components/AboutUs/ourClients'
+import AppointmentBanner from '@/Components/Partials/appointmentBanner'
 
 export default function page() {
   return (
@@ -15,6 +16,7 @@ export default function page() {
         <WhoWeAre/>
         <WhyBsEnviro/>
         <OurClinets/>
+        <AppointmentBanner/>
       </main>
       <Footer />
     </div>

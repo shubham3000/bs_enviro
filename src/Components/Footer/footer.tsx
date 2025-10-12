@@ -63,9 +63,9 @@ export default function Footer() {
               <li>
                 <Link href={"/aboutus"}>About Us</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href={"/projects"}>Projects</Link>
-              </li>
+              </li> */}
               <li>
                 <Link href={"/contactus"}>Contact Us</Link>
               </li>
@@ -76,37 +76,36 @@ export default function Footer() {
             <ul className="space-y-3 text-xs xl:text-sm font-medium opacity-65 cursor-pointer">
               <li>
                 <Link href={"/products/sewageTreatmentPlant"}>
-                  Sewage Treatment Plant{" "}
+                  Sewage Treatment Plant
                 </Link>
               </li>
               <li>
                 <Link href={"/products/effluentTreatmentPlant"}>
-                  Effluent Treatment Plant{" "}
+                  Effluent Treatment Plant
                 </Link>
               </li>
               <li>
                 <Link href={"/products/waterTreatmentPlant"}>
-                  Water Treatment Plant{" "}
+                  Water Treatment Plant
                 </Link>
               </li>
               <li>
                 <Link href={"/products/disinfectionUnit"}>
-                  Disinfection Unit{" "}
+                  Disinfection Unit
                 </Link>
               </li>
               <li>
-                <Link href={"/products/fabricatedItem"}>Fabricated Item </Link>
+                <Link href={"/products/fabricatedItem"}>Fabricated Item</Link>
               </li>
             </ul>
           </div>
         </motion.div>
 
         {/* Social Media Section */}
-        <motion.div
-          className=" font-montserrat"
-          {...popUpAnimationProps}
-        >
-          <h2 className="text-sm text-center lg:text-start xl:text-lg font-bold mb-4">Follow Us</h2>
+        <motion.div className=" font-montserrat" {...popUpAnimationProps}>
+          <h2 className="text-sm text-center lg:text-start xl:text-lg font-bold mb-4">
+            Follow Us
+          </h2>
           <div className="flex space-x-4 justify-center md:justify-start">
             <Link
               href="#"
@@ -142,9 +141,7 @@ export default function Footer() {
 
       {/* Bottom Section */}
       <div className="w-full bg-[#01959A] text-center py-4">
-        <p
-          className="text-xs xl:text-sm opacity-65 font-semibold font-montserrat"
-        >
+        <p className="text-xs xl:text-sm opacity-65 font-semibold font-montserrat">
           Copyright © 2007-{new Date().getFullYear()} B S Enviro N Infracon Pvt.
           Ltd. All Rights Reserved.
         </p>
