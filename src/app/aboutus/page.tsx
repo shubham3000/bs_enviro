@@ -4,6 +4,7 @@ import React from 'react'
 import HeroBg from "@/Components/Partials/herobg"
 import WhoWeAre from '@/Components/AboutUs/whoWeAre'
 import WhyBsEnviro from '@/Components/AboutUs/whyBSEnviro'
+import OurClinets from '@/Components/AboutUs/ourClients'
 
 export default function page() {
   return (
@@ -13,6 +14,7 @@ export default function page() {
         <HeroBg heading='About <br/> B S Enviro' imageurl='/assests/aboutherobg.png'/>
         <WhoWeAre/>
         <WhyBsEnviro/>
+        <OurClinets/>
       </main>
       <Footer />
     </div>

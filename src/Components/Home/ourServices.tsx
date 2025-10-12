@@ -166,6 +166,7 @@ function ExpandableServiceCard({ service }: { service: Service }) {
           style={{
             filter: "drop-shadow(0px 0px 4px rgba(0,0,0,0.25))",
           }}
+          loading="lazy"
         />
       </div>
     </div>

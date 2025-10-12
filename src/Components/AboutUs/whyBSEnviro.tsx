@@ -64,6 +64,7 @@ const WhyBsEnviro: React.FC = () => {
                 src={feature.icon}
                 alt={feature.title}
                 className="w-12 xl:w-20 h-12 xl:h-20 "
+                loading="lazy"
               />
               <h3 className="font-montserrat font-bold text-xl xl:text-3xl text-[#233852]">
                 {feature.title}
