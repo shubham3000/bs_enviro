@@ -6,7 +6,7 @@ import { popUpAnimationProps } from "@/animation/Framer";
 export default function ourVission() {
   return (
     <section
-      className="w-screen py-16 md:py-24  px-4 md:px-12 xl:px-24 bg-white relative"
+      className="w-screen py-16 md:py-24 px-4 md:px-12 xl:px-24 bg-white relative"
       id="VisionMissionGoal"
     >
       <div className="absolute inset-0">

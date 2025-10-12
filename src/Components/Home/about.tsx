@@ -47,11 +47,12 @@ export default function about() {
               Advanced MBBR (PVA GEL) etc. We deal in designing and Execution of
               Water & Waste - Water Management projects.
             </motion.p>
-            <Link href={"/aboutus"}>
-              <p className=" p-4 xl:p-6 mt-12 border rounded-full border-[#233852] w-12 xl:w-16 h-12 xl:h-16 flex justify-center items-center">
-                <FaArrowRightLong className="text-[#233852]" />
-              </p>
-            </Link>
+
+            <p className=" p-4 xl:p-6 mt-12 border rounded-full border-[#233852] w-12 xl:w-16 h-12 xl:h-16 flex justify-center items-center">
+              <Link href={"/aboutus"}>
+                <FaArrowRightLong className="text-[#233852]" />{" "}
+              </Link>
+            </p>
           </div>
 
           {/* Right Section */}
