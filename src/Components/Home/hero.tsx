@@ -29,13 +29,12 @@ export default function hero() {
               A Complete Water & <br/> Waste Water Solution
             </motion.h1>
             <motion.h3
-              className="text-center px-2 md:px-4 mt-8 xl:mt-12 text-white font-epilogue text-sm md:text-lg lg:text-xl xl:text-2xl max-w-3xl xl:max-w-5xl"
+              className="text-center px-2 md:px-4 mt-8 xl:mt-12 text-white font-epilogue text-lg lg:text-xl xl:text-3xl max-w-3xl xl:max-w-6xl"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
             >
-              Designing and Installing Sewage Treatment, UF/UV/RO & Water Supply
-              Systems Tailored for Industrial, Residential & Municipal Needs
+              Every day, we recycle 1 million litres of wastewater to sustain tomorrow’s environment
             </motion.h3>
           </div>
           <motion.div

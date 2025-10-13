@@ -3,8 +3,8 @@ import React from "react";
 import Logo from "@/assests/Logo/Footerlogo.png";
 import Link from "next/link";
 import Image from "next/image";
-import { FaFacebookF, FaYoutube } from "react-icons/fa6";
-import { FaInstagram, FaMapMarkerAlt, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaXTwitter, FaYoutube } from "react-icons/fa6";
+import { FaInstagram, FaMapMarkerAlt } from "react-icons/fa";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
 import { motion } from "framer-motion";
@@ -42,8 +42,8 @@ export default function Footer() {
             <div className="flex gap-2 items-start">
               <IoMdMail className="w-5 h-5" />
               <div className="flex flex-col space-y-3">
-                <p>info@bsenviro.com</p>
                 <p>sales@bsenviro.com</p>
+                <p>bsenvirodelhi@gmail.com</p>
               </div>
             </div>
           </motion.div>
@@ -119,14 +119,14 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="bg-[#2C3745] h-9 xl:h-12 w-9 xl:w-12 p-3 flex items-center justify-center border-0 rounded-full"
             >
-              <FaTwitter className="text-white text-lg xl:text-xl" />
+              <FaInstagram className="text-white text-lg xl:text-xl" />
             </Link>
             <Link
               href="#"
               rel="noopener noreferrer"
               className="bg-[#2C3745] h-9 xl:h-12 w-9 xl:w-12 p-3 flex items-center justify-center border-0 rounded-full"
             >
-              <FaInstagram className="text-white text-lg xl:text-xl" />
+              <FaXTwitter className="text-white text-lg xl:text-xl" />
             </Link>
             <Link
               href="#"
