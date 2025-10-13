@@ -1,14 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { sewageTreatmentPlant } from "@/data/sewageTreatmentPlant";
 import { motion } from "framer-motion";
 import { textAnimationProps } from "@/animation/Framer";
 import Image, { StaticImageData } from "next/image";
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
-// ✅ Define proper interface with StaticImageData for Next.js images
 interface TabData {
   id: string;
   label: string;
@@ -18,15 +18,39 @@ interface TabData {
 }
 
 const SewageTreatmentPlant: React.FC = () => {
+  const [tabIndex, setTabIndex] = useState(0);
+  const tabSectionRef = useRef<HTMLDivElement | null>(null);
+
+  const handleNext = () => {
+    if (tabIndex < sewageTreatmentPlant.length - 1) {
+      setTabIndex(tabIndex + 1);
+      scrollToTabs();
+    }
+  };
+
+  const handlePrev = () => {
+    if (tabIndex > 0) {
+      setTabIndex(tabIndex - 1);
+      scrollToTabs();
+    }
+  };
+
+  const scrollToTabs = () => {
+    tabSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
-    <section className="w-screen min-h-screen pb-16 md:pb-24 px-4 md:px-12 xl:px-24 bg-white overflow-hidden">
+    <section
+      ref={tabSectionRef}
+      className="w-screen min-h-screen pb-16 md:pb-24 px-4 md:px-12 xl:px-24 bg-white overflow-hidden"
+    >
       <div className="container mx-auto">
-        <Tabs>
-          <TabList className="flex border-b border-gray-300 mb-6 overflow-x-auto no-scrollbar mt-2 lg:mt-6">
+        <Tabs selectedIndex={tabIndex} onSelect={setTabIndex}>
+          <TabList className="flex border-b border-gray-300 mb-6 overflow-x-auto no-scrollbar mt-2 lg:mt-6 w-full">
             {sewageTreatmentPlant.map((tab: TabData) => (
               <Tab
                 key={tab.id}
-                className="px-6 py-3 text-lg md:text-xl xl:text-2xl text-[#233852] cursor-pointer hover:text-[#0195B1] focus:outline-none whitespace-nowrap transition-colors duration-300 font-montserrat font-semibold"
+                className="flex-1 text-center px-4 py-3 text-base md:text-lg xl:text-xl text-[#233852] cursor-pointer hover:text-[#0195B1] focus:outline-none whitespace-nowrap transition-colors duration-300 font-montserrat font-semibold"
                 selectedClassName="border-b-4 border-[#0195B1] !text-[#0195B1] font-semibold"
               >
                 {tab.label}
@@ -34,7 +58,7 @@ const SewageTreatmentPlant: React.FC = () => {
             ))}
           </TabList>
 
-          {sewageTreatmentPlant.map((tab: TabData) => (
+          {sewageTreatmentPlant.map((tab: TabData, index: number) => (
             <TabPanel key={tab.id}>
               <div className="space-y-8 mt-8">
                 {tab.image && (
@@ -42,7 +66,7 @@ const SewageTreatmentPlant: React.FC = () => {
                     <Image
                       src={tab.image}
                       alt={tab.label}
-                      className="w-full max-w-4xl"
+                      className="w-full md:max-w-4xl rounded-2xl shadow-lg"
                     />
                   </div>
                 )}
@@ -59,6 +83,27 @@ const SewageTreatmentPlant: React.FC = () => {
                     className="text-base md:text-lg leading-relaxed text-[#233852] font-epilogue font-normal text-justify space-y-4"
                     dangerouslySetInnerHTML={{ __html: tab.description }}
                   />
+                )}
+              </div>
+              <div className="flex justify-between items-center mt-12">
+                {index > 0 ? (
+                  <button
+                    onClick={handlePrev}
+                    className="flex justify-center items-center gap-1.5 bg-[#233852] text-white px-6 py-3 rounded-lg hover:bg-[#0195B1] transition-all duration-300 font-montserrat cursor-pointer"
+                  >
+                    <FaArrowLeftLong/> Previous: {sewageTreatmentPlant[index - 1].label}
+                  </button>
+                ) : (
+                  <div />
+                )}
+
+                {index < sewageTreatmentPlant.length - 1 && (
+                  <button
+                    onClick={handleNext}
+                    className="flex justify-center items-center gap-1.5 bg-[#0195B1] text-white px-6 py-3 rounded-lg hover:bg-[#233852] transition-all duration-300 font-montserrat cursor-pointer"
+                  >
+                    Next: {sewageTreatmentPlant[index + 1].label} <FaArrowRightLong/>
+                  </button>
                 )}
               </div>
             </TabPanel>
