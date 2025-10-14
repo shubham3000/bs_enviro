@@ -2,7 +2,7 @@ import ETP from "@/assests/Products/ETP/etp.png";
 
 export const effluentTreatmentPlant = [
     {
-        id: "mbbr",
+        id: "etp",
         label: "ETP",
         title: "Effluent Treatment Plant (ETP)",
         image: ETP,
