@@ -10,7 +10,7 @@ export default function page() {
     <div>
       <Header isWhite={true} />
       <main className="max-w-screen-2xl">
-        <ProductHeroBg heading='Effluent Treatment <br/> Plant (ETP)' imageurl='/assests/ProductHeroBg.png'/>
+        <ProductHeroBg heading='Effluent Treatment <br/> Plant (ETP)' imageurl='/assests/ProductHeroBgSTP.png'/>
         <EffluentTreatmentPlant/>
         <AppointmentBanner/>
       </main>
