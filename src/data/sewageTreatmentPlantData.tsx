@@ -1,8 +1,8 @@
-import MBBR from "@/assests/Products/MBBR.png";
-import SBR from "@/assests/Products/SBR.png";
-import MBR from "@/assests/Products/MBR.png";
-import ASP from "@/assests/Products/ASP.png";
-import PVA from "@/assests/Products/PVA.png";
+import MBBR from "@/assests/Products/STP/MBBR.png";
+import SBR from "@/assests/Products/STP/SBR.png";
+import MBR from "@/assests/Products/STP/MBR.png";
+import ASP from "@/assests/Products/STP/ASP.png";
+import PVA from "@/assests/Products/STP/PVA.png";
 export const sewageTreatmentPlant = [
   {
     id: "mbbr",

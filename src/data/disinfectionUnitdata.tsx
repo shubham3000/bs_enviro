@@ -1,7 +1,7 @@
 import Chlorination from "@/assests/Products/DU/chlorination.png";
 import Ozonator from "@/assests/Products/DU/ozonator.png";
 import ECA from "@/assests/Products/DU/eca.png";
-import ASP from "@/assests/Products/DU/chlorination.png";
+import UV from "@/assests/Products/DU/UV.png";
 export const disinfectionUnit = [
   {
     id: "chlorination",
@@ -76,7 +76,7 @@ export const disinfectionUnit = [
     id: "UVsterilize",
     label: "UV Sterilize",
     title: "Ultra-Violet Unit",
-    image: ECA, 
+    image: UV, 
     description: `
     <style>
     .description-content ul {

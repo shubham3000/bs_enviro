@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { textAnimationProps } from "@/animation/Framer";
 import Image, { StaticImageData } from "next/image";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
-import { disinfectionUnit } from "@/data/disinfectionUnit";
+import { disinfectionUnit } from "@/data/disinfectionUnitdata";
 
 interface TabData {
   id: string;

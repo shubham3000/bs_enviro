@@ -7,13 +7,14 @@ import { motion } from "framer-motion";
 import { textAnimationProps } from "@/animation/Framer";
 import Image, { StaticImageData } from "next/image";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
-import { waterTreatmentPlant } from "@/data/waterTreatmentPlant";
+import { waterTreatmentPlant } from "@/data/waterTreatmentPlantdata";
 
 interface TabData {
   id: string;
   label: string;
   title: string;
   image?: StaticImageData;
+  sideImage?: StaticImageData;
   description?: string;
 }
 
@@ -36,7 +37,10 @@ const WaterTreatmentPlant: React.FC = () => {
   };
 
   const scrollToTabs = () => {
-    tabSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    tabSectionRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   };
 
   return (
@@ -78,11 +82,32 @@ const WaterTreatmentPlant: React.FC = () => {
                   {tab.title}
                 </motion.h2>
 
-                {tab.description && (
-                  <div
-                    className="text-base md:text-lg leading-relaxed text-[#233852] font-epilogue font-normal text-justify space-y-4"
-                    dangerouslySetInnerHTML={{ __html: tab.description }}
-                  />
+                {tab.sideImage ? (
+                  <div className="w-full flex gap-12">
+                    <div className="w-3/4">
+                      {tab.description && (
+                        <div
+                          className="text-base md:text-lg leading-relaxed text-[#233852] font-epilogue font-normal text-justify space-y-4"
+                          dangerouslySetInnerHTML={{ __html: tab.description }}
+                        />
+                      )}
+                    </div>
+
+                    <div className="w-1/4 flex justify-center">
+                      <Image
+                        src={tab.sideImage}
+                        alt={`${tab.label} side`}
+                        className="w-full md:max-w-md rounded-2xl shadow-lg object-cover"
+                      />
+                    </div>
+                  </div>
+                ) : (
+                  tab.description && (
+                    <div
+                      className="text-base md:text-lg leading-relaxed text-[#233852] font-epilogue font-normal text-justify space-y-4"
+                      dangerouslySetInnerHTML={{ __html: tab.description }}
+                    />
+                  )
                 )}
               </div>
               <div className="flex justify-between items-center mt-12">
@@ -91,7 +116,8 @@ const WaterTreatmentPlant: React.FC = () => {
                     onClick={handlePrev}
                     className="flex justify-center items-center gap-1.5 bg-[#233852] text-white px-6 py-3 rounded-lg hover:bg-[#0195B1] transition-all duration-300 font-montserrat cursor-pointer"
                   >
-                    <FaArrowLeftLong/> Previous: {waterTreatmentPlant[index - 1].label}
+                    <FaArrowLeftLong /> Previous:{" "}
+                    {waterTreatmentPlant[index - 1].label}
                   </button>
                 ) : (
                   <div />
@@ -102,7 +128,8 @@ const WaterTreatmentPlant: React.FC = () => {
                     onClick={handleNext}
                     className="flex justify-center items-center gap-1.5 bg-[#0195B1] text-white px-6 py-3 rounded-lg hover:bg-[#233852] transition-all duration-300 font-montserrat cursor-pointer"
                   >
-                    Next: {waterTreatmentPlant[index + 1].label} <FaArrowRightLong/>
+                    Next: {waterTreatmentPlant[index + 1].label}{" "}
+                    <FaArrowRightLong />
                   </button>
                 )}
               </div>

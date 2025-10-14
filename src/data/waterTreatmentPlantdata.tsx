@@ -1,15 +1,13 @@
-import RO from "@/assests/Products/RO/ro.png";
-import UF from "@/assests/Products/UF/uf.png";
-import MBR from "@/assests/Products/MBR.png";
-import ASP from "@/assests/Products/ASP.png";
-import PVA from "@/assests/Products/PVA.png";
+import RO from "@/assests/Products/WaterTreatment/ro.png";
+import UF from "@/assests/Products/WaterTreatment/uf.png";
+import Vessel from "@/assests/Products/WaterTreatment/Vessel.png"
 export const waterTreatmentPlant = [
-    {
-        id: "ro",
-        label: "RO",
-        title: "Reverse Osmosis Unit",
-        image: RO,
-        description: `
+  {
+    id: "ro",
+    label: "RO",
+    title: "Reverse Osmosis Unit",
+    image: RO,
+    description: `
     <style>
     .description-content ul {
       list-style-type: disc;
@@ -44,13 +42,13 @@ export const waterTreatmentPlant = [
     </ul>
     </div>
   `,
-    },
-    {
-        id: "uf",
-        label: "UF",
-        title: "Ultra - filtration Unit",
-        image: UF,
-        description: `
+  },
+  {
+    id: "uf",
+    label: "UF",
+    title: "Ultra - filtration Unit",
+    image: UF,
+    description: `
     <style>
     .description-content ul {
       list-style-type: disc;
@@ -89,13 +87,13 @@ export const waterTreatmentPlant = [
     </ul>    
     </div>
   `,
-    },
-    {
-        id: "dmPlant",
-        label: "DM PLANT",
-        title: "DM PLANT",
-        // image: MBR,
-        description: `
+  },
+  {
+    id: "dmPlant",
+    label: "DM PLANT",
+    title: "DM PLANT",
+    // image: "",
+    description: `
     <style>
     .description-content ul {
       list-style-type: disc;
@@ -130,13 +128,85 @@ export const waterTreatmentPlant = [
     </p>  
     </div>
   `,
-    },
-    {
-        id: "MGFPSFDMF",
-        label: "MGF / PSF/ DMF",
-        title: "Multigrade/Pressure/Dual Media",
-        image: ASP,
-        description: `
+  },
+  {
+    id: "MGFPSFDMF",
+    label: "MGF / PSF/ DMF",
+    title: "Multigrade/Pressure/Dual Media",
+    // image: "",
+    sideImage: Vessel,
+    description: `
+    <style>
+    </style>
+    <div class="description-content">
+    <p>
+      Our company is a prominent manufacturer of multi grade filter and provides engineering services from designing, manufacturing to installation and commissioning. Our Multigrade sand filtration plants are designed to meet specific requirements of our customers; no matter what quality of water you use and what your flow rate requirements are, our engineering team is capable of configuring the same accordingly, we can manufacture and supply any capacity you need.
+    </p>
+    <br/>
+    <h2><strong>Working Principle</strong></h2>
+    <p>
+    A latest concept in the water treatment technology, a Multi Grade Filter consists
+    of vertical or horizontal pressure sand filters that contain multiple layers of
+    coarse and fine sand (pebbles and gravels) in a fixed proportion. It is a kind of a
+    deep filter bed with adequate pore dimensions for retaining both large and small
+    suspended solids and un-dissolved impurities like dust particles. As compared
+    to conventional sand water filter, this Multigrade filtration system works on
+    higher specific flow rates.lt is also a Iow-cost pre-treatment system for ion
+    exchangers (deionizer and softener) and membrane systems such as reverse
+    osmosis etc. With high through puts, high dirt- holding capacity and capacity to
+    reduce tur -bidity and TSS (< 20 ppm) from water, it protectsion- exchange resins
+    and membranes from physical fouling due to suspended impurities present in
+    the water. The next and last step is back washing, a process of effectively
+    removal of captured contaminants from the media bed.
+    Note: Vessel size will be provided as per requirement of client.
+    </p>
+    </div>
+  `,
+  },
+  {
+    id: "acf",
+    label: "ACF",
+    title: "Activated Carbon Filter",
+    // image: "",
+    sideImage: Vessel,
+    description: `
+    <style>
+    </style>
+    <div class="description-content">
+    <p>
+    Activated Carbon Filter is widely accepted system in water filtration techniques. The treated water is free
+    from chloramines (chlorine and ammonia mixture) and organic compounds; therefore, best for discharge
+    and production use. Activated Carbon Filter is also utilized inpre- treatment for RO water plant and DM plant
+    as the treated water keeps these systems safe from oxidation or organic fouling.
+    </p>
+    <br/>
+    <h2><strong>Working Principle</strong></h2>
+    <p>
+    An activated carbon filter (ACF) works on the principle of adsorption; filter medium
+    adsorbs or reacts with a pollutant molecule then filtered water is drained out.
+    Activated carbon which is used as medium to remove contaminants is natural
+    material derived from coconut shell, lignite, bituminous coal etc. further, activated
+    by chemical or steam under absence of oxygen with high temperature around
+    10000C.Which Activated Carbon is Right for You? There are two types of activated
+    carbons available, Granules Activated Carbon(GAC)and Powdered Activated Carbon
+    (PAC); In general, Granule Activated Carbon is made by steam activation of coal and
+    is widely used in purifying drinking water, whereas Powdered Activated Carbon is
+    produced by steam activation of lignite coal under carefully controlled conditions
+    and issued in treating (remove toxic organics along with BOD, COD and TOC)
+    industrial waste water, process water and highly contaminated municipal waste
+    water.
+    Note: Vessel size will be provided as per requirement of client.
+    </p>
+    </div>
+  `,
+  },
+  {
+    id: "wsp",
+    label: "WSP",
+    title: "Water Softener Plant",
+    // image: "",
+    sideImage: Vessel,
+    description: `
     <style>
     .description-content ul {
       list-style-type: disc;
@@ -145,62 +215,33 @@ export const waterTreatmentPlant = [
     </style>
     <div class="description-content">
     <p>
-      Our company is a prominent manufacturer of multi grade filter and provides engineering services from designing, manufacturing to installation and commissioning. Our Multigrade sand filtration plants are designed to meet specific requirements of our customers; no matter what quality of water you use and what your flow rate requirements are, our engineering team is capable of configuring the same accordingly, we can manufacture and supply any capacity you need.
+    Industrial water softener is a kind of water filter, which removes hardness from water causes due to
+    presence of Calcium and Magnesium. For industries and commercial units, hard water poses a potential
+    threat. The performance of boilers, cooling towers and other associated equipment adversely affected by
+    scaling caused by hard water. Water Softener is considered as concrete solution for this problem, which
+    prevents scale forming. We deal in industrial hard water treatment with manufacturing of water softener.
     </p>
     <br/>
-    <p>
-      The activated sludge process for removing carbonaceous pollution begins with an aeration tank where air (or oxygen) is injected into the waste water. This is followed by a settling tank to allow the biological flocs (the sludge blanket) to settle, thus separating the biological sludge from the clear treated water. Part of the waste sludge is recycled to the aeration tank and the remaining waste sludge is removed for further treatment and ultimate disposal.
-    </p>
+    <h2><strong>Design Consideration</strong></h2>
+    <ul>
+        <li>Volume of water to be treated.</li>
+        <li>Hardness of water.</li>
+        <li>Regeneration frequency in a day.</li>
+    </ul>  
     <br/>
-    <h2><strong>Process description</strong></h2>
-    <p>
-      The process takes advantage of aerobic micro-organisms that can digest organic matter in sewage, and clump together by flocculation entrapping fine particulate matter as they do so. It thereby produces a liquid that is relatively free from suspended solids and organic material, and flocculated particles that will readily settle out and can be removed.
-    </p>
-    <br/>
-    <h2><strong>The general arrangement of an activated sludge process for removing carbonaceous pollution includes the following items:</strong></h2>
-    <p>
-      Aeration tank where air (or oxygen) is injected in the mixed liquor. Settling tank (usually referred to as "final clarifier" or "secondary settling tank") to allow the biological flocs (the sludge blanket) to settle, thus separating the biological sludge from the clear treated water. Treatment of nitrogenous or phosphorous matter comprises the addition of an anoxic compartment inside the aeration tank in order to perform the nitrification-denitrification process more efficiently. First, ammonia is oxidized to nitrite, which is then converted into nitrate in aerobic conditions (aeration compartment).
-    </p>
-    <br/>
-    <p>
-      Facultative bacteria then reduce the nitrate to nitrogen gas in anoxic conditions (anoxic compartment). Moreover, the organisms used for the phosphorus uptake (Polyphosphate Accumulating Organisms) are more efficient under anoxic conditons. These microorganisms accumulate large amounts of phosphates in their cells and are setttled in the secondary clarifier or removed as waste of activated sludge (WAS). The yield of PAOs (Polyphosphate Accumulating Organisms) is reduced between 70-80% under aerobic conditions. Even though the phosphorus can be removed upstream of the aeration tank by chemical precipitation (adding metal ions such as: calcium, aluminum or iron), the biological phophorus removal is more economic due to the saving of chemicals.
-    </p>
+     <h2><strong>Industrial Water Softener Applications</strong></h2>
+    <ul>
+        <li>Hospitals and healthcare</li>
+        <li>Hotels an ressorts</li>
+        <li>Food processing units</li>
+        <li>Cooling tower feed water</li>
+        <li>Boiler feed water</li>
+        <li>Humidification and air-conditioning</li>
+        <li>Pharmaceutical industry</li>
+        <li>Oil and gas</li>
+        <li>Restaurant</li>
+    </ul> 
     </div>
   `,
-    },
-    {
-        id: "pva",
-        label: "PVA GEL (Advance MBBR)",
-        title: "Tubedek Media",
-        image: PVA,
-        description: `
-    <style>
-    .description-content {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    }
-    </style>
-    <div class="description-content">
-      <h2><strong>Features of PVA-gel beads</strong></h2>
-      <h2><strong>Stable immobilization of bacteria</strong></h2>
-      High load operation
-      <h2><strong>High load operation</strong></h2>
-      Standard 25 kg BOD/m3 gel･d (2.5 kg BOD/ m3 tank volume･d)
-      <h2><strong>Nitrification, Denitrification (Nitrate treatment)</strong></h2>
-      Standard 3kg N/m3gel･d(0.3kgN/m3 tank volume･d)
-      <h2><strong>Anaerobic (Methanefermentation)</strong></h2>
-      Standard 3 kg N/m3 gel･d (0.3 kg N/m3 tank volume･d)
-      <h2><strong>Bacteria rich ﬂora</strong></h2>
-      Lower excess sludge
-      <h2><strong>Aerobic treatment</strong></h2>
-      Aerobic treatment: 30% or less of removed BOD
-      <h2><strong>Autolysis treatment</strong></h2>
-      Autolysis treatment: 5 to 10% of removed BOD
-      It differs according to water qualities.
-      <h2><strong>High biodegradability of organic substances</strong></h2>
-      Treatment of low degradable substances- Oil and grease, PVA and so on
-    </div>
-  `,
-    },
+  },
 ];

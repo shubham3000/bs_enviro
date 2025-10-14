@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { textAnimationProps } from "@/animation/Framer";
 import Image, { StaticImageData } from "next/image";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
-import { effluentTreatmentPlant } from "@/data/effluentTreatmentPlant";
+import { effluentTreatmentPlant } from "@/data/effluentTreatmentPlantData";
 
 interface TabData {
   id: string;
