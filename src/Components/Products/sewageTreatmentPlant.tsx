@@ -3,7 +3,7 @@
 import React, { useRef, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import { sewageTreatmentPlant } from "@/data/sewageTreatmentPlant";
+import { sewageTreatmentPlant } from "@/data/sewageTreatmentPlantData";
 import { motion } from "framer-motion";
 import { textAnimationProps } from "@/animation/Framer";
 import Image, { StaticImageData } from "next/image";
@@ -67,6 +67,7 @@ const SewageTreatmentPlant: React.FC = () => {
                       src={tab.image}
                       alt={tab.label}
                       className="w-full md:max-w-4xl rounded-2xl shadow-lg"
+                      loading="lazy"
                     />
                   </div>
                 )}
