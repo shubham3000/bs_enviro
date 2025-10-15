@@ -48,7 +48,7 @@ const EffluentTreatmentPlant: React.FC = () => {
       <div className="container mx-auto">
         <Tabs selectedIndex={tabIndex} onSelect={setTabIndex}>
           <TabList className="flex border-b border-gray-300 mb-6 overflow-x-auto no-scrollbar mt-2 lg:mt-6 w-full">
-            {/* {effluentTreatmentPlant.map((tab: TabData) => (
+            {effluentTreatmentPlant.map((tab: TabData) => (
               <Tab
                 key={tab.id}
                 className="flex-1 text-center px-4 py-3 text-base md:text-lg xl:text-xl text-[#233852] cursor-pointer hover:text-[#0195B1] focus:outline-none whitespace-nowrap transition-colors duration-300 font-montserrat font-semibold"
@@ -56,7 +56,7 @@ const EffluentTreatmentPlant: React.FC = () => {
               >
                 {tab.label}
               </Tab>
-            ))} */}
+            ))}
           </TabList>
 
           {effluentTreatmentPlant.map((tab: TabData, index: number) => (
