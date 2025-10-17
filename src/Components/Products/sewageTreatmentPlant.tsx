@@ -86,24 +86,26 @@ const SewageTreatmentPlant: React.FC = () => {
                   />
                 )}
               </div>
-              <div className="flex justify-between items-center mt-12">
+              <div className="flex flex-col md:flex-row justify-between items-center gap-4 mt-12 w-full">
                 {index > 0 ? (
                   <button
                     onClick={handlePrev}
-                    className="flex justify-center items-center gap-1.5 bg-[#233852] text-white px-6 py-3 rounded-lg hover:bg-[#0195B1] transition-all duration-300 font-montserrat cursor-pointer"
+                    className="flex justify-center items-center gap-1.5 bg-[#233852] text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-[#0195B1] transition-all duration-300 font-montserrat cursor-pointer text-sm sm:text-base w-full md:w-auto text-center whitespace-normal break-words"
                   >
-                    <FaArrowLeftLong/> Previous: {sewageTreatmentPlant[index - 1].label}
+                    <FaArrowLeftLong /> Previous:{" "}
+                    {sewageTreatmentPlant[index - 1].label}
                   </button>
                 ) : (
-                  <div />
+                  <div className="w-full md:w-auto" />
                 )}
 
                 {index < sewageTreatmentPlant.length - 1 && (
                   <button
                     onClick={handleNext}
-                    className="flex justify-center items-center gap-1.5 bg-[#0195B1] text-white px-6 py-3 rounded-lg hover:bg-[#233852] transition-all duration-300 font-montserrat cursor-pointer"
+                    className="flex justify-center items-center gap-1.5 bg-[#0195B1] text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-[#233852] transition-all duration-300 font-montserrat cursor-pointer text-sm sm:text-base w-full md:w-auto text-center whitespace-normal break-words"
                   >
-                    Next: {sewageTreatmentPlant[index + 1].label} <FaArrowRightLong/>
+                    Next: {sewageTreatmentPlant[index + 1].label}{" "}
+                    <FaArrowRightLong />
                   </button>
                 )}
               </div>
