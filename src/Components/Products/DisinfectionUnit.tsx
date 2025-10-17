@@ -10,6 +10,7 @@ import Image, { StaticImageData } from "next/image";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import { disinfectionUnit } from "@/data/disinfectionUnitdata";
 
+
 interface TabData {
   id: string;
   label: string;
@@ -86,27 +87,29 @@ const DisinfectionUnit: React.FC = () => {
                   />
                 )}
               </div>
-              <div className="flex justify-between items-center mt-12">
-                {index > 0 ? (
-                  <button
-                    onClick={handlePrev}
-                    className="flex justify-center items-center gap-1.5 bg-[#233852] text-white px-6 py-3 rounded-lg hover:bg-[#0195B1] transition-all duration-300 font-montserrat cursor-pointer"
-                  >
-                    <FaArrowLeftLong/> Previous: {disinfectionUnit[index - 1].label}
-                  </button>
-                ) : (
-                  <div />
-                )}
+              <div className="flex flex-col md:flex-row justify-between items-center gap-4 mt-12 w-full">
+                                {index > 0 ? (
+                                    <button
+                                        onClick={handlePrev}
+                                        className="flex justify-center items-center gap-1.5 bg-[#233852] text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-[#0195B1] transition-all duration-300 font-montserrat cursor-pointer text-sm sm:text-base w-full md:w-auto text-center whitespace-normal break-words"
+                                    >
+                                        <FaArrowLeftLong /> Previous:{" "}
+                                        {disinfectionUnit[index - 1].label}
+                                    </button>
+                                ) : (
+                                    <div className="w-full md:w-auto" />
+                                )}
 
-                {index < disinfectionUnit.length - 1 && (
-                  <button
-                    onClick={handleNext}
-                    className="flex justify-center items-center gap-1.5 bg-[#0195B1] text-white px-6 py-3 rounded-lg hover:bg-[#233852] transition-all duration-300 font-montserrat cursor-pointer"
-                  >
-                    Next: {disinfectionUnit[index + 1].label} <FaArrowRightLong/>
-                  </button>
-                )}
-              </div>
+                                {index < disinfectionUnit.length - 1 && (
+                                    <button
+                                        onClick={handleNext}
+                                        className="flex justify-center items-center gap-1.5 bg-[#0195B1] text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-[#233852] transition-all duration-300 font-montserrat cursor-pointer text-sm sm:text-base w-full md:w-auto text-center whitespace-normal break-words"
+                                    >
+                                        Next: {disinfectionUnit[index + 1].label}{" "}
+                                        <FaArrowRightLong />
+                                    </button>
+                                )}
+                            </div>
             </TabPanel>
           ))}
         </Tabs>
