@@ -34,7 +34,7 @@ export default function hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
             >
-              Every day, we recycle 1 million litres of wastewater to sustain tomorrow’s environment
+              Every day, we recycle one million litres of wastewater to sustain tomorrow’s environment
             </motion.h3>
           </div>
           <motion.div

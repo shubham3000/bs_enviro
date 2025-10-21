@@ -1,26 +1,26 @@
 [
   {
-    "icon": "/assets/Icons/reputation.png",
+    "icon": "/assests/Icons/reputation.png",
     "title": "Proven Expertise",
     "description": "With over 23+ years of experience, we have successfully executed projects across diverse industries, making us a trusted name in sustainable water solutions."
   },
   {
-    "icon": "/assets/Icons/endtoend.png",
+    "icon": "/assests/Icons/endtoend.png",
     "title": "End-to-End Services",
     "description": "From Consulting & Engineering to EPC, O&M, and AMC, we offer complete lifecycle support – ensuring your systems are designed, built, and maintained for long-term efficiency."
   },
   {
-    "icon": "/assets/Icons/innovation.png",
+    "icon": "/assests/Icons/innovation.png",
     "title": "Innovation & Sustainability",
     "description": "Our solutions are built around the core principles of Recycle, Reduce, and Reuse, helping clients not only meet compliance but also contribute to a greener future."
   },
   {
-    "icon": "/assets/Icons/customer.png",
+    "icon": "/assests/Icons/customer.png",
     "title": "Customer-Centric Approach",
     "description": "Every project we deliver is tailored to meet specific client needs. We pride ourselves on reliability, transparency, and on-time delivery."
   },
   {
-    "icon": "/assets/Icons/compliance.png",
+    "icon": "/assests/Icons/compliance.png",
     "title": "Quality & Compliance",
     "description": "We follow strict quality standards and regulatory guidelines, ensuring that our projects are safe, efficient, and future-ready."
   }
