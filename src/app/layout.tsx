@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: "B S Enviro N Infracon Pvt Ltd",
-  description:
-    "Designing and Installing Sewage Treatment, UF/UV/RO & Water Supply Systems Tailored for Industrial, Residential & Municipal Needs",
-};
+// export const metadata: Metadata = {
+//   title: "B S Enviro N Infracon Pvt Ltd",
+//   description:
+//     "A Complete Water & Waste Water Solution",
+// };
 
 export default function RootLayout({
   children,

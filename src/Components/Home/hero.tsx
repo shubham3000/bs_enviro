@@ -8,14 +8,12 @@ export default function hero() {
   return (
     <>
       <motion.section
-        className="w-screen overflow-hidden flex flex-col justify-center items-center"
+        className="w-screen h-[70vh] md:h-screen overflow-hidden flex flex-col justify-center items-center"
         style={{
           backgroundImage: "url('/assests/Homeherobg.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          height: "100vh",
-          width: "100vw",
         }}
       >
         <div className="container h-full flex flex-col justify-center items-center">
