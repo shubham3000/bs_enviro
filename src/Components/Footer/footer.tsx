@@ -30,7 +30,7 @@ export default function Footer() {
           <motion.div className="space-y-3 text-xs xl:text-sm opacity-65">
             <p className="flex items-center gap-2">
               <FaMapMarkerAlt className="w-4 h-4" /> E-1069, 2nd Floor, Sec-7,
-              Dwarka New Delhi - 110077 INDIA
+              Dwarka New Delhi - 110077, INDIA
             </p>
             <div className="flex gap-2 items-start">
               <BsFillTelephoneFill className="mt-2 w-4 h-4" />

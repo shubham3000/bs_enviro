@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
+import { popUpAnimationProps } from "@/animation/Framer";
 
 export default function contactUs() {
   const router = useRouter();
@@ -13,17 +14,17 @@ export default function contactUs() {
     <>
       <section className="relative w-screen overflow-hidden pt-24 pb-32 md:pb-52 xl:pb-64 md:pt-44 px-4 md:px-12 xl:px-24 ">
         <div className="absolute inset-0">
-        <div className="h-1/2 bg-[#01959A]" />
-        <div className="h-1/2 bg-white relative">
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "radial-gradient(circle at 80% 80%, rgba(117, 181, 183, 0.5), transparent 60%)",
-            }}
-          ></div>
+          <div className="h-1/2 bg-[#01959A]" />
+          <div className="h-1/2 bg-white relative">
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "radial-gradient(circle at 80% 80%, rgba(117, 181, 183, 0.5), transparent 60%)",
+              }}
+            ></div>
+          </div>
         </div>
-      </div>
         <div className="relative z-10 container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start">
             <div className="flex flex-col gap-6 lg:gap-16">
@@ -43,21 +44,30 @@ export default function contactUs() {
 
           <div className="flex flex-col md:flex-row justify-between items-center md:items-start">
             <div className="flex-1 md:relative md:top-60">
-              <h2 className="text-white font-montserrat font-bold text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl mb-4 mt-8 md:mt-0">
+              <motion.h2
+                className="text-white font-montserrat font-bold text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl mb-4 mt-8 md:mt-0"
+                {...popUpAnimationProps}
+              >
                 Product Enquiry/
                 <br className="hidden md:block" />
-                <br/>
+                <br />
                 <span className=" text-white md:text-[#01959A]">Quotation</span>
-              </h2>
-              <p className="text-white md:text-[#233852] text-sm xl:text-lg 2xl:text-xl font-medium font-montserrat mt-8 xl:mt-12 mb-8">
+              </motion.h2>
+              <motion.p
+                className="text-white md:text-[#233852] text-sm xl:text-lg 2xl:text-xl font-medium font-montserrat mt-8 xl:mt-12 mb-8"
+                {...popUpAnimationProps}
+              >
                 Send us a message in case of any enquiry or visit our site
                 office anytime.
-              </p>
+              </motion.p>
 
-              <motion.div className="space-y-3 text-white md:text-[#233852] text-sm xl:text-lg 2xl:text-xl font-medium font-montserrat">
+              <motion.div
+                className="space-y-3 text-white md:text-[#233852] text-sm xl:text-lg 2xl:text-xl font-medium font-montserrat"
+                {...popUpAnimationProps}
+              >
                 <p className="flex items-center gap-2">
                   <FaMapMarkerAlt className="w-4 h-4" /> E-1069, 2nd Floor,
-                  Sec-7, Dwarka New Delhi - 110077 INDIA
+                  Sec-7, Dwarka New Delhi - 110077, INDIA
                 </p>
                 <div className="flex gap-2 items-start">
                   <BsFillTelephoneFill className="mt-2 w-4 h-4" />
