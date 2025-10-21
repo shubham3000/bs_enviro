@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-// export const metadata: Metadata = {
-//   title: "B S Enviro N Infracon Pvt Ltd",
-//   description:
-//     "A Complete Water & Waste Water Solution",
-// };
+export const metadata: Metadata = {
+  title: {
+    template: '%s | B S Enviro N Infracon Pvt Ltd',
+    default: 'B S Enviro N Infracon Pvt Ltd',
+  },
+  description:
+    "A Complete Water & Waste Water Solution",
+  metadataBase: new URL('https://bsenviro.com/'),
+  keywords: ['B S Enviro N Infracon Pvt Ltd', 'water treatment', 'waste water solution']
+};
 
 export default function RootLayout({
   children,
