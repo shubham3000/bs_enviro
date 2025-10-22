@@ -4,6 +4,12 @@ import React from 'react'
 import AppointmentBanner from '@/Components/Partials/appointmentBanner'
 import ProductHeroBg from '@/Components/Partials/productherobg'
 import FabricatedItem from '@/Components/Products/fabricatedItem'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Fabricated Items',
+  metadataBase: new URL('https://bsenviro.com/products/fabricatedItem'),
+};
 
 export default function page() {
   return (

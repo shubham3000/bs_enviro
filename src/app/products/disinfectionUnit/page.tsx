@@ -4,6 +4,12 @@ import React from 'react'
 import AppointmentBanner from '@/Components/Partials/appointmentBanner'
 import ProductHeroBg from '@/Components/Partials/productherobg'
 import DisinfectionUnit from '@/Components/Products/DisinfectionUnit'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Disinfection Unit',
+  metadataBase: new URL('https://bsenviro.com/products/disinfectionUnit'),
+};
 
 export default function page() {
   return (

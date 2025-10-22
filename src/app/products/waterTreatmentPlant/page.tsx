@@ -4,6 +4,12 @@ import React from 'react'
 import AppointmentBanner from '@/Components/Partials/appointmentBanner'
 import ProductHeroBg from '@/Components/Partials/productherobg'
 import WaterTreatmentPlant from '@/Components/Products/WaterTreatmentPlant'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Water Treatment Plant',
+  metadataBase: new URL('https://bsenviro.com/products/waterTreatmentPlant'),
+};
 
 export default function page() {
   return (

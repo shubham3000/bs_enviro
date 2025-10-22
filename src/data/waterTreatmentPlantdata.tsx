@@ -1,6 +1,8 @@
 import RO from "@/assests/Products/WaterTreatment/ro.png";
 import UF from "@/assests/Products/WaterTreatment/uf.png";
-import Vessel from "@/assests/Products/WaterTreatment/Vessel.png"
+import Vessel from "@/assests/Products/WaterTreatment/Vessel1.png";
+import ACF from "@/assests/Products/WaterTreatment/ACF.png";
+import WSP from "@/assests/Products/WaterTreatment/WSP.png";
 export const waterTreatmentPlant = [
   {
     id: "ro",
@@ -168,7 +170,7 @@ export const waterTreatmentPlant = [
     label: "ACF",
     title: "Activated Carbon Filter",
     // image: "",
-    sideImage: Vessel,
+    sideImage: ACF,
     description: `
     <style>
     </style>
@@ -205,7 +207,7 @@ export const waterTreatmentPlant = [
     label: "WSP",
     title: "Water Softener Plant",
     // image: "",
-    sideImage: Vessel,
+    sideImage: WSP,
     description: `
     <style>
     .description-content ul {
