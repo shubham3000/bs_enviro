@@ -22,10 +22,10 @@ export default function ourJourney() {
             <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 mt-12 xl:mt-24">
               <div className="flex flex-col justify-center items-center gap-4">
                 <h2 className="font-montserrat font-semibold text-3xl xl:text-8xl text-white">
-                  {isInView ? <CountUp end={600} duration={2} /> : 0}+
+                  {isInView ? <CountUp end={10} duration={2} /> : 0}+
                 </h2>
                 <p className="font-montserrat font-medium text-base xl:text-2xl text-white">
-                  Happy Clients
+                  Satisfied Clients
                 </p>
               </div>
               <div className="flex flex-col justify-center items-center gap-4 md:border-l md:border-r border-gray-400 px-8 md:px-16">
@@ -33,12 +33,12 @@ export default function ourJourney() {
                   {isInView ? <CountUp end={new Date().getFullYear() - 2002} duration={2} /> : 0}+
                 </h2>
                 <p className="font-montserrat font-medium text-base xl:text-2xl text-white">
-                  Years Experience
+                  Year's of Experience
                 </p>
               </div>
               <div className="flex flex-col justify-center items-center gap-4">
                 <h2 className="font-montserrat font-semibold text-3xl xl:text-8xl text-white">
-                  {isInView ? <CountUp end={500} duration={2} /> : 0}+
+                  {isInView ? <CountUp end={100} duration={2} /> : 0}+
                 </h2>
                 <p className="font-montserrat font-medium text-base xl:text-2xl text-white">
                   Successfull Projects

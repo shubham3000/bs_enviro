@@ -24,7 +24,7 @@ export default function hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}
             >
-              A Complete Water & <br/> Waste Water Solution
+              A Complete Water & <br className="hidden md:block"/> Waste Water Solution
             </motion.h1>
             <motion.h3
               className="text-center px-2 md:px-4 mt-8 xl:mt-12 text-white font-epilogue text-lg lg:text-xl xl:text-3xl max-w-3xl xl:max-w-6xl"
