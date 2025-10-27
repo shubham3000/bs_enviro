@@ -19,29 +19,37 @@ export default function ourJourney() {
             >
               Our Journey...
             </motion.h2>
-            <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 mt-12 xl:mt-24">
-              <div className="flex flex-col justify-center items-center gap-4">
-                <h2 className="font-montserrat font-semibold text-3xl xl:text-8xl text-white">
-                  {isInView ? <CountUp end={10} duration={2} /> : 0}+
+            <div className="flex flex-col md:flex-row justify-center items-center gap-8 2xl:gap-16 mt-12 xl:mt-24">
+              <div className="flex flex-col justify-center items-center gap-3 xl:gap-4 md:border-r border-gray-400 pr-8 py-4 text-center">
+                <h2 className="font-montserrat font-semibold text-3xl xl:text-6xl 2xl:text-8xl text-white">
+                  {isInView ? <CountUp end={20} duration={2} /> : 0}+
                 </h2>
                 <p className="font-montserrat font-medium text-base xl:text-2xl text-white">
                   Satisfied Clients
                 </p>
               </div>
-              <div className="flex flex-col justify-center items-center gap-4 md:border-l md:border-r border-gray-400 px-8 md:px-16">
-                <h2 className="font-montserrat font-semibold text-3xl xl:text-8xl text-white">
+              <div className="flex flex-col justify-center items-center gap-3 xl:gap-4 md:border-r border-gray-400 pr-8 py-4 text-center">
+                <h2 className="font-montserrat font-semibold text-3xl xl:text-6xl 2xl:text-8xl text-white">
                   {isInView ? <CountUp end={new Date().getFullYear() - 2002} duration={2} /> : 0}+
                 </h2>
                 <p className="font-montserrat font-medium text-base xl:text-2xl text-white">
-                  Year's of Experience
+                  Years of Experience
                 </p>
               </div>
-              <div className="flex flex-col justify-center items-center gap-4">
-                <h2 className="font-montserrat font-semibold text-3xl xl:text-8xl text-white">
+              <div className="flex flex-col justify-center items-center gap-3 xl:gap-4 md:border-r border-gray-400 pr-8 py-4 text-center">
+                <h2 className="font-montserrat font-semibold text-3xl xl:text-6xl 2xl:text-8xl text-white">
                   {isInView ? <CountUp end={100} duration={2} /> : 0}+
                 </h2>
                 <p className="font-montserrat font-medium text-base xl:text-2xl text-white">
                   Successfull Projects
+                </p>
+              </div>
+              <div className="flex flex-col justify-center items-center gap-3 xl:gap-4 text-center py-4">
+                <h2 className="font-montserrat font-semibold text-3xl xl:text-6xl 2xl:text-8xl text-white">
+                  {isInView ? <CountUp end={100} duration={2} /> : 0} million
+                </h2>
+                <p className="font-montserrat font-medium text-base xl:text-2xl text-white">
+                  Recycling Wastewater Every Day
                 </p>
               </div>
             </div>
