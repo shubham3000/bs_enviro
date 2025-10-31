@@ -35,14 +35,13 @@ export default function Footer() {
             <div className="flex gap-2 items-start">
               <BsFillTelephoneFill className="mt-2 w-4 h-4" />
               <div className="flex flex-col space-y-3">
-                <p>+91-11414 11203</p>
                 <p>+91-81309 25273</p>
               </div>
             </div>
             <div className="flex gap-2 items-start">
               <IoMdMail className="w-5 h-5" />
               <div className="flex flex-col space-y-3">
-                <p>sales@bsenviro.com</p>
+                <p>info@bsenviro.com</p>
                 <p>bsenvirodelhi@gmail.com</p>
               </div>
             </div>

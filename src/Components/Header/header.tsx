@@ -79,11 +79,7 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
         isScrolled ? "fixed top-0 shadow-md" : "absolute"
       }`}
       style={{
-        backgroundColor: isScrolled
-          ? isWhite
-            ? "#FFF"
-            : "#FFF"
-          : "transparent",
+        backgroundColor: isScrolled ? "#FFF" : isWhite ? "transparent" : "#FFF",
       }}
     >
       <div className="container">
@@ -93,7 +89,7 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
             <div className="flex items-center">
               <Link href="/">
                 <Image
-                  src={isScrolled ? (isWhite ? LogoBlue : Logo) : Logo}
+                  src={isScrolled ? LogoBlue : isWhite ? Logo : LogoBlue}
                   alt="B S Enviro Logo"
                   className="md:h-8 xl:h-10 w-3/4 md:w-auto"
                 />
@@ -106,10 +102,10 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
                 <motion.div
                   className={`${
                     isScrolled
-                      ? isWhite
-                        ? "border-[#0195B1]"
-                        : "border-[#0195B1]"
-                      : "border-white"
+                      ? "border-[#0195B1]"
+                      : isWhite
+                      ? "border-white"
+                      : "border-[#0195B1]"
                   } hidden md:flex items-center gap-2 cursor-pointer font-semibold text-sm xl:text-lg border-2 px-4 py-2 xl:py-4 rounded-full transition-colors text-white `}
                   whileTap={{ scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -119,10 +115,10 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
                     href="/documents/BSEnviro_Catalogue.pdf"
                     className={`${
                       isScrolled
-                        ? isWhite
-                          ? "text-[#0195B1]"
-                          : "text-[#0195B1]"
-                        : "text-white"
+                        ? "text-[#0195B1]"
+                        : isWhite
+                        ? "text-white"
+                        : "text-[#0195B1]"
                     } transition-colors`}
                     target="_blank"
                   >
@@ -131,10 +127,10 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
                   <IconDownload
                     className={`${
                       isScrolled
-                        ? isWhite
-                          ? "text-[#0195B1]"
-                          : "text-[#0195B1]"
-                        : "text-white"
+                        ? "text-[#0195B1]"
+                        : isWhite
+                        ? "text-white"
+                        : "text-[#0195B1]"
                     } transition-colors`}
                   />
                 </motion.div>
@@ -148,19 +144,19 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
                     onClick={showSidebar}
                     className={`${
                       isScrolled
-                        ? isWhite
-                          ? "text-[#01959A] border-[#01959A]"
-                          : "text-[#01959A] border-[#01959A]"
-                        : "text-white border-white"
+                        ? "text-[#01959A] border-[#01959A]"
+                        : isWhite
+                        ? "text-white border-white"
+                        : "text-[#01959A] border-[#01959A]"
                     } flex justify-center items-center w-10 md:w-20 border-2 px-0 md:px-2 xl:px-4 py-0 md:py-2 xl:py-4 cursor-pointer rounded-full`}
                   >
                     <IconMenu
                       className={`${
                         isScrolled
-                          ? isWhite
-                            ? "text-[#0195B1]"
-                            : "text-[#0195B1]"
-                          : "text-white"
+                          ? "text-[#0195B1]"
+                          : isWhite
+                          ? "text-white"
+                          : "text-[#0195B1]"
                       } transition-colors md:w-10 xl:w-20`}
                     />
                   </button>
@@ -171,18 +167,18 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
 
           {/* Sidebar */}
           <motion.nav
-            className={`fixed top-0 left-0 h-full w-full md:w-2/5 bg-[#233852] text-white transform transition-transform ${
-              sidebar ? "translate-x-0" : "-translate-x-full"
+            className={`fixed top-0 right-0 h-full w-full md:w-2/5 bg-[#233852] text-white transform transition-transform ${
+              sidebar ? "translate-x-0" : "translate-x-full"
             }`}
           >
-            <div className="flex justify-end p-4">
+            <div className="flex justify-end p-4 mb-9">
               <button onClick={showSidebar}>
                 <RxCross1 className="text-2xl cursor-pointer" />
               </button>
             </div>
 
             <motion.ul
-              className="flex flex-col space-y-8 px-6"
+              className="flex flex-col items-start  md:items-end space-y-4 xl:space-y-12 px-6"
               initial="hidden"
               animate={sidebar ? "visible" : "hidden"}
               variants={{
@@ -196,7 +192,7 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
                     staggerChildren: 1,
                   },
                 },
-                hidden: { opacity: 0, x: -50 },
+                hidden: { opacity: 0, x: 50 },
               }}
             >
               <AnimatePresence>
@@ -218,15 +214,14 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
                     <div>
                       <Link
                         href={item.path}
-                        className="text-2xl xl:text-5xl font-medium flex items-center"
+                        className="text-2xl xl:text-5xl font-medium flex items-center md:justify-end"
                         style={{ fontFamily: "Montserrat" }}
                         onClick={() =>
                           item.subItems && toggleDropdown(item.title)
                         }
                       >
-                        {item.title}
                         {item.subItems && (
-                          <span className="ml-2 cursor-pointer">
+                          <span className="ml-2 cursor-pointer order-2 md:order-1">
                             {dropdownOpen[item.title] ? (
                               <IconChevronUp className="w-8 xl:w-12 h-8 xl:h-12" />
                             ) : (
@@ -234,9 +229,10 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
                             )}
                           </span>
                         )}
+                        <p className="order-1 md:order-2">{item.title}</p>
                       </Link>
                       {item.subItems && dropdownOpen[item.title] && (
-                        <ul className="ml-4 mt-4 space-y-6">
+                        <ul className="ml-4 mt-4 space-y-6 flex flex-col items-start md:items-end">
                           {item.subItems.map((subItem, subIndex) => (
                             <li key={subIndex}>
                               <Link
@@ -268,9 +264,7 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
                   >
                     Catalogue Download
                   </Link>
-                  <IconDownload
-                    className="text-white transition-colors"
-                  />
+                  <IconDownload className="text-white transition-colors" />
                 </motion.div>
               </AnimatePresence>
             </motion.ul>

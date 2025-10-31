@@ -52,11 +52,11 @@ export default function aboutVideo() {
         <div className="relative w-full max-w-6xl mx-auto mt-16 aspect-video rounded-2xl overflow-hidden shadow-xl border border-blue-100">
           <video
           ref={videoRef}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover aspect-video"
             src="/assests/Video/BSVideoIntro.mp4"
             loop
             playsInline
-              muted
+            muted
           />
 
           <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 via-transparent to-transparent" />

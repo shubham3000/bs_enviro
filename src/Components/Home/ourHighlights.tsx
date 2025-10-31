@@ -62,7 +62,7 @@ export default function ourHighlights() {
                   className="text-base xl:text-xl text-[#233852] border-l-2 border-[#0195B1] pl-4 md:text-left mt-6 xl:mt-8 font-epilogue"
                   {...textAnimationProps}
                 >
-                  Our operations reclaim over 100 million litres of wastewater
+                  Our operations reclaim over 100 million litres of waste water
                   every day—preserving vital resources at scale.
                 </motion.p>
               </div>
