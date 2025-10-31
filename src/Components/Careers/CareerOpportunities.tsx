@@ -17,7 +17,7 @@ export default function CareerOpportunities() {
           <motion.p className=" max-w-6xl font-epilogue font-normal text-sm md:text-lg xl:text-xl text-[#233852] text-center">
             Employees are the driving force behind our success. If you’re
             passionate about shaping a sustainable and innovative future in
-            water and environmental solutions, we’d love to hear from you.
+            water and environmental solutions, we’d love to hear from you..
           </motion.p>
         </div>
       </div>
