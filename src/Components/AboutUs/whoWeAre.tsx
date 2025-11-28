@@ -27,9 +27,8 @@ export default function whoWeAre() {
           </p>
           <p className="mt-4">Our complete solutions include:</p>
           <ul className="list-disc pl-6 mt-4 space-y-2">
-            <li>
-              Sewage Treatment Plants (STP) Effluent Treatment Plants (ETP){" "}
-            </li>
+            <li>Sewage Treatment Plants (STP)</li>
+            <li>Effluent Treatment Plants (ETP) </li>
             <li>Water Treatment Plants (WTP) </li>
             <li>Ultrafiltration Systems(UF) </li>
             <li>Reverse Osmosis Systems (RO) </li>
