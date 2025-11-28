@@ -9,8 +9,12 @@
   },
   "dependencies": {
     "@tabler/icons-react": "^3.35.0",
+    "@tiptap/react": "^3.10.1",
+    "@tiptap/starter-kit": "^3.10.1",
     "autoprefixer": "^10.4.21",
+    "firebase": "^12.5.0",
     "framer-motion": "^12.23.22",
+    "jodit-react": "^5.2.38",
     "next": "^15.5.4",
     "postcss": "^8.5.6",
     "react": "19.1.0",

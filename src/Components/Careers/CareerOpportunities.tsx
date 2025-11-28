@@ -17,7 +17,13 @@ export default function CareerOpportunities() {
           <motion.p className=" max-w-6xl font-epilogue font-normal text-sm md:text-lg xl:text-xl text-[#233852] text-center">
             Employees are the driving force behind our success. If you’re
             passionate about shaping a sustainable and innovative future in
-            water and environmental solutions, we’d love to hear from you..
+            water and environmental solutions, we’d love to hear from you.
+          </motion.p>
+          <motion.p className=" max-w-6xl font-epilogue font-normal text-sm md:text-lg xl:text-xl text-[#233852] text-center mt-4">
+            Please send your resume to: 
+            <strong> bsenvirodelhi@gmail.com </strong>
+            <br /> Kindly mention your name and the position you are applying
+            for in the email subject line.
           </motion.p>
         </div>
       </div>

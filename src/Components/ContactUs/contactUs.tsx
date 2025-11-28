@@ -46,7 +46,6 @@ export default function contactUs() {
             <div className="flex-1 md:relative md:top-60">
               <motion.h2
                 className="text-white font-montserrat font-bold text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl mb-4 mt-8 md:mt-0"
-                {...popUpAnimationProps}
               >
                 Product Enquiry/
                 <br className="hidden md:block" />

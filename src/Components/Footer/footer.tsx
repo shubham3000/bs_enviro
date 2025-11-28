@@ -32,9 +32,9 @@ export default function Footer() {
               <FaMapMarkerAlt className="w-4 h-4" /> E-1069, 2nd Floor, Sec-7,
               Dwarka New Delhi - 110077, INDIA
             </p>
-            <div className="flex gap-2 items-start">
+            <div className="flex gap-2 items-center">
               <BsFillTelephoneFill className="mt-2 w-4 h-4" />
-              <div className="flex flex-col space-y-3">
+              <div className="flex space-y-3">
                 <p>+91-81309 25273</p>
               </div>
             </div>

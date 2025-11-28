@@ -5,6 +5,7 @@ import ContactUs from '@/Components/ContactUs/contactUs'
 import { Metadata } from 'next'
 import Hero from "@/Components/Careers/hero"
 import CareerOpportunities from '@/Components/Careers/CareerOpportunities'
+import CareerRowTemplate from '@/Components/Careers/careerRowTemplate'
 
 export const metadata: Metadata = {
   title: 'Careers',
@@ -18,6 +19,7 @@ export default function page() {
       <main className="max-w-screen-2xl">
         <Hero/>
         <CareerOpportunities/>
+        <CareerRowTemplate/>
       </main>
       <Footer />
     </div>
