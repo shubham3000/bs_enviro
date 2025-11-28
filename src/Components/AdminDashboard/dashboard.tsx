@@ -1,9 +1,13 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
-import JoditEditor from "jodit-react";
+import dynamic from "next/dynamic";
+
+const JoditEditor = dynamic(() => import("jodit-react"), {
+  ssr: false,
+  loading: () => <p>Loading editor...</p>,
+});
 
 import {
   collection,
@@ -90,7 +94,7 @@ export default function Dashboard() {
     readonly: false,
     height: 300,
     statusbar: false,
-    removeButtons: ['source', 'about', 'fullsize'],
+    removeButtons: ["source", "about", "fullsize"],
   };
 
   // Fetch jobs
@@ -366,7 +370,9 @@ export default function Dashboard() {
                           onChange={(newContent) => {}}
                         />
                       ) : (
-                        <div dangerouslySetInnerHTML={{ __html: job.description }} />
+                        <div
+                          dangerouslySetInnerHTML={{ __html: job.description }}
+                        />
                       )}
                     </td>
                     <td className="p-2 flex space-x-2">
