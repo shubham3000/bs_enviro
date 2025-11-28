@@ -1,0 +1,20 @@
+Options -Indexes
+DirectoryIndex index.html index.htm
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # If request is exactly /foo or /foo/ and a file /foo.html exists in DOCUMENT_ROOT, serve it
+  RewriteCond %{REQUEST_URI} ^/([^/]+)/?$ 
+  RewriteCond %{DOCUMENT_ROOT}/%1.html -f
+  RewriteRule ^ /%1.html [L]
+
+  # Serve existing files/directories normally
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # SPA fallback: everything else -> index.html
+  RewriteRule ^ index.html [L]
+</IfModule>

@@ -5,9 +5,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
     domains: ["https://bsenviro.com/"],
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
+    unoptimized: true,
   },
   typescript: {
     ignoreBuildErrors: true,
@@ -16,7 +14,7 @@ const nextConfig: NextConfig = {
     styledComponents: true,
   },
   pageExtensions: ["tsx", "ts", "jsx", "js"],
-  output: "standalone",
+  output: "export",
 };
 
 export default nextConfig;

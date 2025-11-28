@@ -15,7 +15,7 @@
     "firebase": "^12.5.0",
     "framer-motion": "^12.23.22",
     "jodit-react": "^5.2.38",
-    "next": "^15.5.4",
+    "next": "^16.0.5",
     "postcss": "^8.5.6",
     "react": "19.1.0",
     "react-countup": "^6.5.3",
