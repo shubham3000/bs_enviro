@@ -1,6 +1,6 @@
 <?php
 // Set the response header to indicate JSON content
-header('Content-Type: application/json');
+header('Content-Type: application/json; charset=UTF-8');
 
 // Retrieve the request payload from the React component
 $requestPayload = json_decode(file_get_contents('php://input'), true);
@@ -33,7 +33,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 // Admin email address
-$adminEmail = 'bsenvirodelhi@gmail.com';
+$adminEmail = 'shubhamsadhu02@gmail.com';
 
 // Email subject for admin
 $adminSubject = "New Contact Form Submission: " . $subject;
@@ -96,3 +96,4 @@ if ($adminMailResult && $userMailResult) {
 
 echo json_encode($response);
 ?>
+

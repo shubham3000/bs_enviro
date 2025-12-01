@@ -62,7 +62,7 @@ export default function contactUs() {
     setResponseType(null);
 
     try {
-      const response = await fetch("./sendEmail.php", {
+      const response = await fetch(process.env.NEXT_PUBLIC_API_URL || "https://bsenviro.com/sendEmail.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
