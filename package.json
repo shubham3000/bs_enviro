@@ -15,7 +15,8 @@
     "firebase": "^12.5.0",
     "framer-motion": "^12.23.22",
     "jodit-react": "^5.2.38",
-    "next": "^16.0.5",
+    "next": "^16.0.6",
+    "nodemailer": "^7.0.11",
     "postcss": "^8.5.6",
     "react": "19.1.0",
     "react-countup": "^6.5.3",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/nodemailer": "^7.0.4",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/react-slick": "^0.23.13",

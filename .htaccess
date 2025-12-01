@@ -5,16 +5,20 @@ DirectoryIndex index.html index.htm
   RewriteEngine On
   RewriteBase /
 
-  # If request is exactly /foo or /foo/ and a file /foo.html exists in DOCUMENT_ROOT, serve it
-  RewriteCond %{REQUEST_URI} ^/([^/]+)/?$ 
-  RewriteCond %{DOCUMENT_ROOT}/%1.html -f
-  RewriteRule ^ /%1.html [L]
-
-  # Serve existing files/directories normally
+  # 1. Serve existing files normally
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # SPA fallback: everything else -> index.html
-  RewriteRule ^ index.html [L]
+  # 2. Pretty URLs: /foo -> foo.html  (only if foo.html exists)
+  RewriteCond %{REQUEST_URI} ^/([^/]+)/?$ 
+  RewriteCond %{DOCUMENT_ROOT}/%1.html -f
+  RewriteRule ^ %1.html [L]
+
+  # 3. If no file and no pretty-URL html exists → send to custom 404
+  RewriteRule ^ _not-found.html [L]
+
 </IfModule>
+
+# 4. Custom error page (for direct 404 requests)
+ErrorDocument 404 /_not-found.html

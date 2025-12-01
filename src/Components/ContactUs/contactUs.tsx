@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { motion } from "framer-motion";
@@ -8,8 +8,96 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
 import { popUpAnimationProps } from "@/animation/Framer";
 
+interface FormData {
+  fullName: string;
+  email: string;
+  contactNo: string;
+  subject: string;
+  message: string;
+}
+
 export default function contactUs() {
   const router = useRouter();
+  const [formData, setFormData] = useState<FormData>({
+    fullName: "",
+    email: "",
+    contactNo: "",
+    subject: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [responseMessage, setResponseMessage] = useState("");
+  const [responseType, setResponseType] = useState<"success" | "error" | null>(
+    null
+  );
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    // Validate form fields
+    if (
+      !formData.fullName ||
+      !formData.email ||
+      !formData.contactNo ||
+      !formData.subject ||
+      !formData.message
+    ) {
+      setResponseType("error");
+      setResponseMessage("Please fill all fields.");
+      return;
+    }
+
+    setLoading(true);
+    setResponseMessage("");
+    setResponseType(null);
+
+    try {
+      const response = await fetch("/api/php/sendEmail.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResponseType("success");
+        setResponseMessage(
+          "✅ Email sent successfully! We'll get back to you soon."
+        );
+        setFormData({
+          fullName: "",
+          email: "",
+          contactNo: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setResponseType("error");
+        setResponseMessage(
+          data.message || "❌ Failed to send email. Please try again."
+        );
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setResponseType("error");
+      setResponseMessage("❌ An error occurred. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <>
       <section className="relative w-screen overflow-hidden pt-24 pb-32 md:pb-52 xl:pb-64 md:pt-44 px-4 md:px-12 xl:px-24 ">
@@ -44,9 +132,7 @@ export default function contactUs() {
 
           <div className="flex flex-col md:flex-row justify-between items-center md:items-start">
             <div className="flex-1 md:relative md:top-60">
-              <motion.h2
-                className="text-white font-montserrat font-bold text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl mb-4 mt-8 md:mt-0"
-              >
+              <motion.h2 className="text-white font-montserrat font-bold text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl mb-4 mt-8 md:mt-0">
                 Product Enquiry/
                 <br className="hidden md:block" />
                 <br />
@@ -88,37 +174,75 @@ export default function contactUs() {
               <h3 className="text-2xl xl:text-4xl font-semibold font-montserrat text-[#01959A] text-center mb-8">
                 Get A Free Consultation!
               </h3>
-              <form className="flex flex-col gap-8">
+
+              {responseMessage && (
+                <div
+                  className={`p-4 rounded-md mb-6 text-center font-medium ${
+                    responseType === "success"
+                      ? "bg-green-100 text-green-800"
+                      : "bg-red-100 text-red-800"
+                  }`}
+                >
+                  {responseMessage}
+                </div>
+              )}
+
+              <form className="flex flex-col gap-8" onSubmit={handleSubmit}>
                 <input
                   type="text"
+                  name="fullName"
                   placeholder="Full Name"
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  required
                   className="border bg-white border-gray-300 rounded-md px-4 py-4 focus:outline-none focus:ring-2 focus:ring-[#01959A]"
                 />
                 <input
                   type="email"
+                  name="email"
                   placeholder="Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
                   className="border bg-white border-gray-300 rounded-md px-4 py-4 focus:outline-none focus:ring-2 focus:ring-[#01959A]"
                 />
                 <input
                   type="tel"
+                  name="contactNo"
                   placeholder="Contact No."
+                  value={formData.contactNo}
+                  onChange={handleChange}
+                  required
                   className="border bg-white border-gray-300 rounded-md px-4 py-4 focus:outline-none focus:ring-2 focus:ring-[#01959A]"
                 />
                 <input
                   type="text"
+                  name="subject"
                   placeholder="Subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
                   className="border bg-white border-gray-300 rounded-md px-4 py-4 focus:outline-none focus:ring-2 focus:ring-[#01959A]"
                 />
                 <textarea
                   rows={4}
+                  name="message"
                   placeholder="Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
                   className="border bg-white border-gray-300 rounded-md px-4 py-4 focus:outline-none focus:ring-2 focus:ring-[#01959A] resize-none"
                 />
                 <button
                   type="submit"
-                  className="self-end bg-[#233852] font-montserrat font-semibold text-white px-6 py-4 rounded-full flex items-center gap-2 hover:bg-[#01959A] cursor-pointer transition-all"
+                  disabled={loading}
+                  className={`self-end font-montserrat font-semibold text-white px-6 py-4 rounded-full flex items-center gap-2 transition-all ${
+                    loading
+                      ? "bg-gray-400 cursor-not-allowed"
+                      : "bg-[#233852] hover:bg-[#01959A] cursor-pointer"
+                  }`}
                 >
-                  Submit →
+                  {loading ? "Sending..." : "Submit →"}
                 </button>
               </form>
             </div>
