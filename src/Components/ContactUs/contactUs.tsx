@@ -62,7 +62,7 @@ export default function contactUs() {
     setResponseType(null);
 
     try {
-      const response = await fetch("/api/php/sendEmail.php", {
+      const response = await fetch("./sendEmail.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -212,6 +212,7 @@ export default function contactUs() {
                   placeholder="Contact No."
                   value={formData.contactNo}
                   onChange={handleChange}
+                  maxLength={10}
                   required
                   className="border bg-white border-gray-300 rounded-md px-4 py-4 focus:outline-none focus:ring-2 focus:ring-[#01959A]"
                 />
