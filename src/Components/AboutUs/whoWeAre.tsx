@@ -39,10 +39,12 @@ export default function whoWeAre() {
             consistent quality.
           </p>
           <p className="mt-4">
-            We proudly serve leading clients like CPWD,PWD, UPRNN, HAL,
-            Shapoorji & Pallonji , Varindera Constructions, RKS Constructions,
-            NPCIL, RITES, EIL, NBCC, L&T, Ahluwalia Contracts, BMSICL and many
-            others.
+            We proudly serve leading clients like{" "}
+            <strong>
+              CPWD, PWD, UPRNN, HAL, Shapoorji & Pallonji, Varindera
+              Constructions, RKS Constructions, NPCIL, RITES, EIL, NBCC, L&T,
+              Ahluwalia Contracts, BMSICL and many others.
+            </strong>
           </p>
           <p className="mt-4">
             Our success comes from providing reliable, efficient, and

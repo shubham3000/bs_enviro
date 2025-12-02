@@ -23,30 +23,48 @@ export default function about() {
             >
               About B S Enviro N Infracon Pvt Ltd
             </motion.h2>
-            <motion.p
+            <motion.div
               className="mt-6 text-sm xl:text-lg font-medium text-[#233852] font-epilogue"
               {...textAnimationProps}
             >
-              Established in 2002 with an intention of providing solutions for
-              RECYCLING, REDUCING & REUSING Waste Water from various domestic &
-              industrial activities. B S Enviro N Infracon PVT. LTD. has grown
-              to be a world leading solution provider for water and wastewater
-              treatment with offices in Pan India.
-              <br />
-              <br />
-              The economy on our future world relies on Green technologies and
-              Waste Management. We are an established and popular company with
-              an excellent record of accomplishment in Water Management field. B
-              S Enviro is green initiative company with tremendous growth in
-              short span of time. We provide solutions and services Water
-              Management technology. We took a step forward to make environment
-              clean. Our prime focus is on Water & Waste-Water Treatment Plants,
-              We are leading firm in this field and have outstanding proven
-              works. We have well qualified and experienced staff and with their
-              best ideas we deal with aerobic technologies like MBBR, SBR, MBR,
-              Advanced MBBR (PVA GEL) etc. We deal in designing and Execution of
-              Water & Waste - Water Management projects.
-            </motion.p>
+              <p>
+            Established in 2002 as B S Engineers, we began with a focus on
+            delivering reliable engineering solutions. In 2012, we restructured
+            as B S Enviro N Infracon Pvt. Ltd. to specialize in sustainable
+            environmental and wastewater management With the mission to Recycle,
+            Reduce & Reuse, we now operate Pan-India, providing high-performance
+            water and wastewater treatment solutions across domestic,
+            commercial, and industrial sectors. Supported by a dedicated team
+            with 20+ years of combined expertise, we excel in designing,
+            executing, and maintaining advanced treatment systems.
+          </p>
+          <p className="mt-4">Our complete solutions include:</p>
+          <ul className="list-disc pl-6 mt-4 space-y-2">
+            <li>Sewage Treatment Plants (STP)</li>
+            <li>Effluent Treatment Plants (ETP) </li>
+            <li>Water Treatment Plants (WTP) </li>
+            <li>Ultrafiltration Systems(UF) </li>
+            <li>Reverse Osmosis Systems (RO) </li>
+            <li>Operation & Maintenance Services (O&M) </li>
+          </ul>
+          <p className="mt-4">
+            From concept to commissioning, we deliver precision, innovation, and
+            consistent quality.
+          </p>
+          <p className="mt-4">
+            We proudly serve leading clients like <strong>CPWD, PWD, UPRNN, HAL,
+            Shapoorji & Pallonji, Varindera Constructions, RKS Constructions,
+            NPCIL, RITES, EIL, NBCC, L&T, Ahluwalia Contracts, BMSICL and many
+            others.</strong>
+          </p>
+          <p className="mt-4">
+            Our success comes from providing reliable, efficient, and
+            sustainable solutions that support cleaner environments across
+            India. At B S Enviro N Infracon Pvt. Ltd., we stand for quality,
+            commitment, and engineering excellence—working towards a greener
+            future with every project.
+          </p>
+            </motion.div>
 
             <p className=" p-4 xl:p-6 mt-12 border rounded-full border-[#233852] w-12 xl:w-16 h-12 xl:h-16 flex justify-center items-center">
               <Link href={"/aboutus"}>
