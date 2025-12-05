@@ -33,7 +33,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 // Admin email address
-$adminEmail = 'shubhamsadhu02@gmail.com';
+$adminEmail = 'bsenvirodelhi@gmail.com';
 
 // Email subject for admin
 $adminSubject = "New Contact Form Submission: " . $subject;
