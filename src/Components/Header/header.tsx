@@ -99,7 +99,7 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
             {/* Right Side */}
             <div className="flex items-center md:space-x-8 md:py-2.5">
               <>
-                <motion.div
+                {/* <motion.div
                   className={`${
                     isScrolled
                       ? "border-[#0195B1]"
@@ -133,7 +133,7 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
                         : "text-[#0195B1]"
                     } transition-colors`}
                   />
-                </motion.div>
+                </motion.div> */}
 
                 <motion.div
                   whileTap={{ scale: 0.9 }}
@@ -250,7 +250,7 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
                     </div>
                   </motion.li>
                 ))}
-                <motion.div
+                {/* <motion.div
                   className={`flex md:hidden items-center gap-2 cursor-pointer font-semibold text-lg py-2 xl:py-4 rounded-full transition-colors text-white `}
                   whileTap={{ scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -265,7 +265,7 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
                     Catalogue Download
                   </Link>
                   <IconDownload className="text-white transition-colors" />
-                </motion.div>
+                </motion.div> */}
               </AnimatePresence>
             </motion.ul>
           </motion.nav>

@@ -22,7 +22,7 @@ export default function page() {
         <HeroBg heading='About <br/> B S Enviro' imageurl='/assests/aboutherobg.png'/>
         <WhoWeAre/>
         <WhyBsEnviro/>
-        <AboutVideo/>
+        {/* <AboutVideo/> */}
         <OurClinets/>
         <AppointmentBanner/>
       </main>
