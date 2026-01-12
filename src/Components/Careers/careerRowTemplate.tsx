@@ -5,6 +5,7 @@ import { db } from "../../../firebase.config";
 import { useState, useEffect } from "react";
 import { fadeInAnimationCompanies } from "@/animation/Framer";
 import { motion } from "framer-motion";
+import ApplicationModal from "../AdminDashboard/ApplicationModal";
 
 interface Job {
   id: string;
@@ -25,13 +26,20 @@ export default function CareerRowTemplate() {
   const [error, setError] = useState<string | null>(null);
   const [expandedJobs, setExpandedJobs] = useState<ExpandedState>({});
   const [currentPage, setCurrentPage] = useState(1);
-  const jobsPerPage = 5; // Number of jobs to show per page
+  const jobsPerPage = 5;
+  const [showApplicationModal, setShowApplicationModal] = useState(false);
+  const [selectedJobForApplication, setSelectedJobForApplication] = useState<any>(null); // Number of jobs to show per page
 
   // Get current jobs
   const indexOfLastJob = currentPage * jobsPerPage;
   const indexOfFirstJob = indexOfLastJob - jobsPerPage;
   const currentJobs = jobs.slice(indexOfFirstJob, indexOfLastJob);
   const totalPages = Math.ceil(jobs.length / jobsPerPage);
+
+  const handleApplyClick = (job: Job) => {
+    setSelectedJobForApplication(job);
+    setShowApplicationModal(true);
+  };
 
   useEffect(() => {
     const fetchJobs = async () => {
@@ -78,7 +86,14 @@ export default function CareerRowTemplate() {
   }
 
   return (
-    <section className="w-screen bg-white py-16 md:py-24 px-4 md:px-12 xl:px-24">
+    <>
+      <ApplicationModal
+        jobId={selectedJobForApplication?.id || ""}
+        jobTitle={selectedJobForApplication?.title || ""}
+        isOpen={showApplicationModal}
+        onClose={() => setShowApplicationModal(false)}
+      />
+      <section className="w-screen bg-white py-16 md:py-24 px-4 md:px-12 xl:px-24">
       <div className="container mx-auto">
         <div className="space-y-6">
           {currentJobs.map((job, index) => (
@@ -114,8 +129,7 @@ export default function CareerRowTemplate() {
                         <span>{job.department}</span>
                       </div>
                       <div
-                        className="flex items-center font-epilogue"
-                        font-semibold
+                        className="flex items-center font-epilogue font-semibold"
                       >
                         <svg
                           className="w-5 h-5 mr-2"
@@ -230,13 +244,14 @@ export default function CareerRowTemplate() {
                       )}
                     </div>
                   </div>
-                  {/* <div className="w-full md:w-auto">
-                  <button
-                    className="w-full md:w-auto px-6 py-3 bg-[#01959A] hover:bg-[#017f82] text-white font-semibold rounded-md transition-colors duration-300"
-                  >
-                    Apply Now
-                  </button>
-                </div> */}
+                  <div className="w-full md:w-auto mt-4 md:mt-0">
+                    <button
+                      onClick={() => handleApplyClick(job)}
+                      className="w-full md:w-auto px-6 py-3 bg-[#01959A] hover:bg-[#017f82] text-white font-semibold rounded-md transition-colors duration-300"
+                    >
+                      Apply Now
+                    </button>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -322,5 +337,6 @@ export default function CareerRowTemplate() {
         </div>
       </div>
     </section>
+    </>
   );
 }

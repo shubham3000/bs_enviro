@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import dynamic from "next/dynamic";
+import ApplicationsList from "./ApplicationsList";
 
 const JoditEditor = dynamic(() => import("jodit-react"), {
   ssr: false,
@@ -413,6 +414,12 @@ export default function Dashboard() {
               </tbody>
             </table>
           )}
+        </div>
+
+        {/* Applications Section */}
+        <div className="bg-white shadow-lg rounded-lg p-6 mt-10">
+          <h2 className="text-2xl font-semibold mb-6">Job Applications</h2>
+          <ApplicationsList />
         </div>
       </div>
     </section>
