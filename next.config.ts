@@ -1,18 +1,28 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   reactStrictMode: true,
+
   images: {
-    domains: ["https://bsenviro.com/"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "bsenviro.com",
+        port: "",
+        pathname: "/**",
+      },
+    ],
     unoptimized: true,
   },
+
   typescript: {
     ignoreBuildErrors: true,
   },
+
   compiler: {
     styledComponents: true,
   },
+
   pageExtensions: ["tsx", "ts", "jsx", "js"],
   output: "export",
 };
