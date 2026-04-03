@@ -54,7 +54,7 @@ const Header: React.FC<HeaderProps> = ({ isWhite = true, isLogin = false }) => {
       ],
     },
     // { title: "Projects", path: "/projects" },
-    // { title: "Careers", path: "/careers" },
+    { title: "Careers", path: "/careers" },
     { title: "Contact Us", path: "/contactus" },
   ];
 

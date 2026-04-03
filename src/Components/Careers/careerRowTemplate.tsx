@@ -67,7 +67,7 @@ export default function CareerRowTemplate() {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center py-20">
+      <div className="flex justify-center items-center py-20 bg-white w-screen">
         <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-[#01959A]"></div>
       </div>
     );
@@ -79,7 +79,7 @@ export default function CareerRowTemplate() {
 
   if (jobs.length === 0) {
     return (
-      <div className="text-center py-20 text-gray-600">
+      <div className="text-center py-20 bg-white w-screen text-gray-600">
         No job openings available at the moment.
       </div>
     );

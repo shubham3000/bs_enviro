@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "../../../firebase.config";
+import { s } from "framer-motion/client";
 
 interface ApplicationModalProps {
   jobId: string;
@@ -20,6 +21,7 @@ export default function ApplicationModal({
     fullName: "",
     email: "",
     phone: "",
+    skills: "",
     coverLetter: "",
   });
   const [loading, setLoading] = useState(false);
@@ -46,6 +48,7 @@ export default function ApplicationModal({
         !formData.fullName ||
         !formData.email ||
         !formData.phone ||
+        !formData.skills ||
         !formData.coverLetter
       ) {
         setMessage("Please fill in all fields.");
@@ -68,6 +71,7 @@ export default function ApplicationModal({
         fullName: formData.fullName,
         email: formData.email,
         phone: formData.phone,
+        skills : formData.skills,
         coverLetter: formData.coverLetter,
         appliedAt: serverTimestamp(),
         status: "pending",
@@ -76,7 +80,7 @@ export default function ApplicationModal({
       console.log("Application saved with ID:", docRef.id);
 
       // Send email
-      const emailResponse = await fetch("/php/sendApplication.php", {
+      const emailResponse = await fetch( process.env.NEXT_PUBLIC_SENDAPLLICATION_API_URL ||"/php/sendApplication.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -87,6 +91,7 @@ export default function ApplicationModal({
           applicantEmail: formData.email,
           applicantPhone: formData.phone,
           jobTitle,
+          skillSet: formData.skills,
           coverLetter: formData.coverLetter,
         }),
       });
@@ -94,11 +99,12 @@ export default function ApplicationModal({
       const result = await emailResponse.json();
 
       if (result.success) {
-        setMessage("✅ Application submitted successfully! We'll contact you soon.");
+        setMessage("Application submitted successfully! We'll contact you soon. <br/> Please also send your resume to this email address : bsenvirodelhi@gmail.com <br/> Thank you for applying!");
         setFormData({
           fullName: "",
           email: "",
           phone: "",
+          skills: "",
           coverLetter: "",
         });
         setTimeout(() => {
@@ -196,6 +202,21 @@ export default function ApplicationModal({
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
+              Skills*
+            </label>
+            <input
+              type="text"
+              name="skills"
+              value={formData.skills}
+              onChange={handleChange}
+              required
+              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#01959A]"
+              placeholder="Your skills"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
               Cover Letter / Message *
             </label>
             <textarea
@@ -204,9 +225,13 @@ export default function ApplicationModal({
               onChange={handleChange}
               required
               rows={4}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#01959A]"
+              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#01959A] resize-none"
               placeholder="Tell us why you're interested in this position..."
             />
+          </div>
+
+          <div className="text-sm font-medium text-gray-700 mb-3">
+            <strong>Note:</strong> After submitting the form, please send your resume to this email address: admin@bsenviro.com
           </div>
 
           <button

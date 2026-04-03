@@ -11,6 +11,7 @@ $applicantEmail = isset($requestPayload['applicantEmail']) ? $requestPayload['ap
 $applicantPhone = isset($requestPayload['applicantPhone']) ? $requestPayload['applicantPhone'] : '';
 $jobTitle = isset($requestPayload['jobTitle']) ? $requestPayload['jobTitle'] : '';
 $jobId = isset($requestPayload['jobId']) ? $requestPayload['jobId'] : '';
+$skillSet = isset($requestPayload['skillSet']) ? $requestPayload['skillSet'] : '';
 $coverLetter = isset($requestPayload['coverLetter']) ? $requestPayload['coverLetter'] : '';
 
 // Validate required fields
@@ -34,7 +35,7 @@ if (!filter_var($applicantEmail, FILTER_VALIDATE_EMAIL)) {
 }
 
 // Admin email address
-$adminEmail = 'bsenvirodelhi@gmail.com';
+$adminEmail = 'admin@bsenviro.com';
 
 // Email subject for admin
 $adminSubject = "New Job Application for " . $jobTitle;
@@ -46,6 +47,7 @@ $adminMessage .= "Position: " . $jobTitle . "\n";
 $adminMessage .= "Applicant Name: " . $applicantName . "\n";
 $adminMessage .= "Email: " . $applicantEmail . "\n";
 $adminMessage .= "Phone: " . $applicantPhone . "\n";
+$adminMessage .= "Skills: " . $skillSet . "\n";
 $adminMessage .= "Cover Letter:\n" . $coverLetter . "\n\n";
 $adminMessage .= "---\n";
 $adminMessage .= "This is a system-generated email. Please login to the admin dashboard to view all applications.\n";
@@ -99,6 +101,7 @@ if ($adminMailResult && $applicantMailResult) {
       'fullName' => $applicantName,
       'email' => $applicantEmail,
       'phone' => $applicantPhone,
+      'skills' => $skillSet,
       'coverLetter' => $coverLetter,
       'appliedAt' => date('Y-m-d H:i:s'),
       'status' => 'pending'

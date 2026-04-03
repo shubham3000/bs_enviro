@@ -21,7 +21,7 @@ export default function CareerOpportunities() {
           </motion.p>
           <motion.p className=" max-w-6xl font-epilogue font-normal text-sm md:text-lg xl:text-xl text-[#233852] text-center mt-4">
             Please send your resume to: 
-            <strong> bsenvirodelhi@gmail.com </strong>
+            <strong> admin@bsenviro.com </strong>
             <br /> Kindly mention your name and the position you are applying
             for in the email subject line.
           </motion.p>

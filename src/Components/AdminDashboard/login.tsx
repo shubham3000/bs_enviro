@@ -182,7 +182,7 @@ export default function Login() {
           </button>
         </form>
 
-        <div className="mt-6 flex items-center">
+        {/* <div className="mt-6 flex items-center">
           <div className="flex-1 border-t border-gray-300"></div>
           <span className="px-3 text-gray-500 text-sm">Or</span>
           <div className="flex-1 border-t border-gray-300"></div>
@@ -217,7 +217,7 @@ export default function Login() {
             />
           </svg>
           {loading ? "Signing in..." : "Sign in with Google"}
-        </button>
+        </button> */}
       </div>
     </div>
   );

@@ -207,7 +207,13 @@ export default function ApplicationsList({ jobId }: ApplicationsListProps) {
       {filteredApplications.map((app) => (
         <div
           key={app.id}
-          className="bg-white border border-gray-200 rounded-lg overflow-hidden"
+          className={`bg-white border border-gray-200 rounded-lg overflow-hidden ${
+                        app.status === "pending"
+                          ? " border-yellow-300 text-yellow-800"
+                          : app.status === "accepted"
+                          ? " border-green-300 text-green-800"
+                          : " border-red-300 text-red-800"
+                      }`}
         >
           <div
             className="p-4 cursor-pointer hover:bg-gray-50 flex justify-between items-center"
@@ -242,6 +248,10 @@ export default function ApplicationsList({ jobId }: ApplicationsListProps) {
                 <div>
                   <p className="text-sm font-semibold text-gray-700">Phone:</p>
                   <p className="text-sm text-gray-600">{app.phone}</p>
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-gray-700">Skills:</p>
+                  <p className="text-sm text-gray-600">{app.skills}</p>
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-gray-700">
